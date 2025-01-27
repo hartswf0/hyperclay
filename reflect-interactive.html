@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reflective Practice Experience</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #00ff00;
+            margin: 0;
+            height: 100vh;
+            font-family: monospace;
+            overflow: hidden;
+        }
+        #canvas-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 2vh;
+            z-index: 100;
+        }
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: #00ff00;
+            font-size: 1.5vh;
+            z-index: 100;
+        }
+        #thought-bubble {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 255, 0, 0.1);
+            border: 1px solid #00ff00;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <a href="reflect.html" class="back-button">← BACK</a>
+    <div id="canvas-container">
+        <canvas id="mainCanvas"></canvas>
+    </div>
+    <div class="instructions">
+        Move mouse to create reflection paths. Click to pause and reflect-in-action. Space to clear.
+    </div>
+    <div id="thought-bubble"></div>
+
+    <script>
+        const canvas = document.getElementById('mainCanvas');
+        const ctx = canvas.getContext('2d');
+        const thoughtBubble = document.getElementById('thought-bubble');
+        
+        let width, height;
+        let paths = [];
+        let currentPath = [];
+        let isPaused = false;
+        let reflectionPoints = [];
+
+        const thoughts = [
+            "What patterns am I seeing?",
+            "How does this connect to past experiences?",
+            "What assumptions am I making?",
+            "What could I do differently?",
+            "What theories inform this practice?",
+            "How am I feeling about this process?",
+            "What surprises me about this situation?",
+            "What would happen if...?"
+        ];
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            ctx.strokeStyle = '#00ff00';
+            ctx.lineWidth = 2;
+        }
+
+        function drawPath(path) {
+            if (path.length < 2) return;
+            ctx.beginPath();
+            ctx.moveTo(path[0].x, path[0].y);
+            for (let i = 1; i < path.length; i++) {
+                ctx.lineTo(path[i].x, path[i].y);
+            }
+            ctx.stroke();
+        }
+
+        function drawReflectionPoint(point) {
+            ctx.beginPath();
+            ctx.arc(point.x, point.y, 5, 0, Math.PI * 2);
+            ctx.fillStyle = '#00ff00';
+            ctx.fill();
+        }
+
+        function animate() {
+            if (!isPaused) {
+                ctx.clearRect(0, 0, width, height);
+                
+                // Draw all paths with fading effect
+                paths.forEach((path, i) => {
+                    ctx.globalAlpha = 0.3 + (i / paths.length) * 0.7;
+                    drawPath(path);
+                });
+                
+                // Draw current path
+                ctx.globalAlpha = 1;
+                drawPath(currentPath);
+                
+                // Draw reflection points
+                reflectionPoints.forEach(point => {
+                    drawReflectionPoint(point);
+                });
+            }
+            requestAnimationFrame(animate);
+        }
+
+        function showThought(x, y) {
+            const thought = thoughts[Math.floor(Math.random() * thoughts.length)];
+            thoughtBubble.textContent = thought;
+            thoughtBubble.style.display = 'block';
+            setTimeout(() => {
+                thoughtBubble.style.display = 'none';
+            }, 3000);
+        }
+
+        window.addEventListener('resize', resize);
+        
+        canvas.addEventListener('mousemove', (e) => {
+            if (!isPaused) {
+                currentPath.push({ x: e.clientX, y: e.clientY });
+                if (currentPath.length > 100) {
+                    paths.push([...currentPath]);
+                    currentPath = [];
+                    if (paths.length > 5) paths.shift();
+                }
+            }
+        });
+
+        canvas.addEventListener('click', (e) => {
+            isPaused = !isPaused;
+            if (isPaused) {
+                reflectionPoints.push({ x: e.clientX, y: e.clientY });
+                showThought(e.clientX, e.clientY);
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                paths = [];
+                currentPath = [];
+                reflectionPoints = [];
+                ctx.clearRect(0, 0, width, height);
+            }
+        });
+
+        resize();
+        animate();
+    </script>
+</body>
+</html>

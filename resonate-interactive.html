@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance Experience</title>
+    <style>
+        body {
+            background: #1a1a1a;
+            color: #00ff00;
+            margin: 0;
+            height: 100vh;
+            font-family: monospace;
+            overflow: hidden;
+            cursor: none;
+        }
+        #canvas-container {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+        }
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #hiddenCanvas {
+            display: none;
+        }
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 2vh;
+            z-index: 100;
+        }
+        .instructions {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            color: #00ff00;
+            font-size: 1.5vh;
+            z-index: 100;
+            max-width: 60vw;
+        }
+        .concern-display {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            color: #00ff00;
+            font-size: 1.5vh;
+            text-align: right;
+            z-index: 100;
+        }
+        .resonance-meter {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 200px;
+            border: 1px solid #00ff00;
+            z-index: 100;
+        }
+        .resonance-level {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #00ff00;
+            transition: height 0.3s;
+        }
+        .concern-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #00ff00;
+            font-size: 2vh;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s;
+            pointer-events: none;
+            z-index: 100;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid #00ff00;
+            max-width: 80vw;
+        }
+        .audio-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #00ff00;
+            font-size: 1.5vh;
+            cursor: pointer;
+            z-index: 100;
+        }
+        .distraction {
+            position: fixed;
+            color: #ff0000;
+            font-size: 2vh;
+            pointer-events: none;
+            z-index: 90;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        .cursor {
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000;
+            font-size: 24px;
+            transform: translate(-50%, -50%);
+            mix-blend-mode: difference;
+        }
+    </style>
+</head>
+<body>
+    <a href="resonate.html" class="back-button">â† BACK</a>
+    <div id="canvas-container">
+        <canvas id="mainCanvas"></canvas>
+        <canvas id="hiddenCanvas"></canvas>
+    </div>
+    <div class="instructions">
+        Move cursor to tune into different frequencies of experience. Find resonance between the compelling concerns.
+        Click when you feel resonance to deepen understanding. Space to reset. M to toggle sound.
+    </div>
+    <div class="concern-display" id="concernDisplay">
+        Current Focus:<br>
+        <span id="currentConcern"></span>
+    </div>
+    <div class="resonance-meter">
+        <div class="resonance-level" id="resonanceLevel"></div>
+    </div>
+    <div class="concern-text" id="concernText"></div>
+    <div class="audio-toggle" id="audioToggle">Sound: ON</div>
+    <div class="cursor" id="cursor">ðŸ‘ï¸</div>
+
+    <script>
+        const canvas = document.getElementById('mainCanvas');
+        const hiddenCanvas = document.getElementById('hiddenCanvas');
+        const ctx = canvas.getContext('2d');
+        const hiddenCtx = hiddenCanvas.getContext('2d');
+        const concernText = document.getElementById('concernText');
+        const currentConcernDisplay = document.getElementById('currentConcern');
+        const resonanceLevel = document.getElementById('resonanceLevel');
+        const audioToggle = document.getElementById('audioToggle');
+        const cursor = document.getElementById('cursor');
+        
+        let width, height;
+        let particles = [];
+        let mousePos = { x: 0, y: 0 };
+        let currentResonance = 0;
+        let targetResonance = 0;
+        let currentConcernIndex = 0;
+        let audioContext;
+        let oscillator;
+        let gainNode;
+        let isAudioEnabled = true;
+        let constellationPoints = [];
+        let revealedImage = new Image();
+        let distractions = [];
+        let isAttending = true;
+        
+        // Load the hidden image
+        revealedImage.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMTAwIiBzdHJva2U9IiMwMGZmMDAiIGZpbGw9Im5vbmUiLz4KICAgIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMTUwIiBzdHJva2U9IiMwMGZmMDAiIGZpbGw9Im5vbmUiLz4KICAgIDxjaXJjbGUgY3g9IjI1MCIgY3k9IjI1MCIgcj0iMjAwIiBzdHJva2U9IiMwMGZmMDAiIGZpbGw9Im5vbmUiLz4KPC9zdmc+';
+
+        revealedImage.onload = () => {
+            generateConstellationPoints();
+        };
+
+        function generateConstellationPoints() {
+            const pointCount = 50;
+            const centerX = width / 2;
+            const centerY = height / 2;
+            
+            for (let i = 0; i < pointCount; i++) {
+                const angle = (i / pointCount) * Math.PI * 2;
+                const radius = 100 + Math.random() * 100;
+                constellationPoints.push({
+                    x: centerX + Math.cos(angle) * radius,
+                    y: centerY + Math.sin(angle) * radius,
+                    angle: angle,
+                    radius: radius
+                });
+            }
+        }
+
+        function initAudio() {
+            audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            oscillator = audioContext.createOscillator();
+            gainNode = audioContext.createGain();
+            
+            oscillator.connect(gainNode);
+            gainNode.connect(audioContext.destination);
+            
+            oscillator.type = 'sine';
+            gainNode.gain.value = 0;
+            
+            oscillator.start();
+        }
+
+        function updateAudio() {
+            if (!audioContext || !isAudioEnabled) return;
+            
+            const baseFreq = 220; // A3 note
+            const maxFreq = 880; // A5 note
+            
+            oscillator.frequency.value = baseFreq + (maxFreq - baseFreq) * currentResonance;
+            gainNode.gain.value = currentResonance * 0.1;
+        }
+
+        const concerns = [
+            {
+                theme: "Daily Life",
+                aspects: [
+                    "Immediate needs and pressures",
+                    "Family relationships",
+                    "Work and livelihood",
+                    "Health and well-being"
+                ]
+            },
+            {
+                theme: "Cultural Navigation",
+                aspects: [
+                    "Traditional practices",
+                    "Modern adaptations",
+                    "Community expectations",
+                    "Personal aspirations"
+                ]
+            },
+            {
+                theme: "Emotional Landscape",
+                aspects: [
+                    "Personal struggles",
+                    "Hopes and dreams",
+                    "Fear and uncertainty",
+                    "Joy and fulfillment"
+                ]
+            }
+        ];
+
+        const insights = [
+            "Beyond cultural categories lies human experience",
+            "What truly matters in daily life?",
+            "Understanding through feeling-thought",
+            "Deexoticizing the mundane reveals truth",
+            "Multiple concerns shape single decisions",
+            "Public and private spheres interweave",
+            "Emotional and rational aspects unite",
+            "Individual experience reflects broader patterns"
+        ];
+
+        const compellingConcerns = [
+            {
+                theme: "Clay and Making",
+                aspects: [
+                    "Clay's getting harder to dig locally",
+                    "Hands aren't as steady as they used to be",
+                    "Electric kiln's more reliable but miss the wood fire",
+                    "Need to finish this commission batch",
+                    "Weather affecting the drying time",
+                    "Glaze ingredients getting expensive"
+                ],
+                rituals: [
+                    "Testing clay consistency with fingers",
+                    "Morning kiln check routine",
+                    "Wedging clay before work",
+                    "Cleaning tools end of day",
+                    "Covering works in progress"
+                ],
+                observed: [
+                    "Keeps old wood kiln despite not using it",
+                    "Frequently touches and examines old pots",
+                    "Arranges tools same way every morning",
+                    "Saves broken pieces in corner",
+                    "Works slower but more deliberately now"
+                ]
+            },
+            {
+                theme: "Family and Legacy",
+                aspects: [
+                    "Grandson showing interest in pottery",
+                    "Workshop needs repairs before winter",
+                    "Old family recipes need writing down",
+                    "Getting harder to lift heavy things",
+                    "Should teach more while still can",
+                    "Family land taxes increasing"
+                ],
+                rituals: [
+                    "Sunday family visits to workshop",
+                    "Telling stories while working",
+                    "Keeping grandfather's tools maintained",
+                    "Making specific forms for relatives",
+                    "Seasonal workshop cleaning"
+                ],
+                observed: [
+                    "Often pauses to show old techniques",
+                    "Keeps grandfather's first pot displayed",
+                    "Maintains specific spaces for family",
+                    "Slower to change methods",
+                    "Carefully documents processes now"
+                ]
+            },
+            {
+                theme: "Market and Change",
+                aspects: [
+                    "Tourists want different things now",
+                    "New housing development nearby",
+                    "Instagram stuff sells different",
+                    "Supply store closed in town",
+                    "Young potters work different way",
+                    "Art fair fees getting higher"
+                ],
+                rituals: [
+                    "Checking orders at breakfast",
+                    "Preparing show pieces",
+                    "Pricing work carefully",
+                    "Organizing shipping materials",
+                    "Photography session for pieces"
+                ],
+                observed: [
+                    "Reluctant to use phone for sales",
+                    "Keeps traditional forms in stock",
+                    "Maintains old price lists",
+                    "Hesitates over modern glazes",
+                    "Carefully wraps each piece himself"
+                ]
+            },
+            {
+                theme: "Daily Life",
+                aspects: [
+                    "Back garden needs attention",
+                    "Doctor says to take more breaks",
+                    "Church roof fund needs help",
+                    "Power bill keeps rising",
+                    "Need to fix truck suspension",
+                    "Well water getting lower"
+                ],
+                rituals: [
+                    "Morning coffee in special mug",
+                    "Afternoon rest in workshop chair",
+                    "Walking the property line",
+                    "Checking weather radar",
+                    "Evening porch sitting"
+                ],
+                observed: [
+                    "Takes longer breaks now",
+                    "Keeps medicine in specific spot",
+                    "Checks phone when thunder comes",
+                    "Saves certain clay for special pieces",
+                    "Always uses same tools first"
+                ]
+            }
+        ];
+
+        const anthropologistConcerns = [
+            "Need to write that paper",
+            "Is my methodology sound?",
+            "What's my theoretical framework?",
+            "Am I being objective enough?",
+            "Need more field notes",
+            "Should check more literature",
+            "Grant deadline coming up",
+            "Department expectations",
+            "Conference submission due",
+            "Need better documentation",
+            "Missing important details?",
+            "Being too interpretive?",
+            "Need more context",
+            "Time running out",
+            "Making assumptions?",
+            "Being too present?",
+            "Being too distant?",
+            "Need more examples",
+            "Missing key patterns?",
+            "What would committee say?"
+        ];
+
+        const distractionTexts = [
+            "Should update the website",
+            "Need to call about that show",
+            "Maybe try those new glazes",
+            "Could sell more online",
+            "Workshop needs modernizing",
+            "Should get better lighting",
+            "Need to check social media",
+            "Could raise prices more",
+            "Maybe get an assistant",
+            "Should do more marketing",
+            "Need better photos",
+            "Time to expand maybe"
+        ];
+
+        class Particle {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.baseFreq = Math.random() * 0.1 + 0.05;
+                this.phase = Math.random() * Math.PI * 2;
+                this.amplitude = Math.random() * 20 + 10;
+                this.speed = Math.random() * 0.5 + 0.5;
+                this.size = Math.random() * 3 + 1;
+                this.targetPoint = constellationPoints[Math.floor(Math.random() * constellationPoints.length)];
+                this.organicFactor = Math.random() * 0.5;
+                this.isAnthropologist = Math.random() < 0.4; // 40% red (anthropologist), 60% green (informant)
+                this.concern = Math.floor(Math.random() * (this.isAnthropologist ? anthropologistConcerns.length : compellingConcerns.length));
+                this.ritual = !this.isAnthropologist ? Math.floor(Math.random() * compellingConcerns[this.concern].rituals.length) : -1;
+                this.bleedFactor = 0;
+            }
+
+            update(time) {
+                const dx = mousePos.x - this.x;
+                const dy = mousePos.y - this.y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                
+                // Update bleed factor based on nearby particles
+                particles.forEach(other => {
+                    if (other !== this) {
+                        const odx = other.x - this.x;
+                        const ody = other.y - this.y;
+                        const odist = Math.sqrt(odx * odx + ody * ody);
+                        if (odist < 50) {
+                            if (this.isAnthropologist === other.isAnthropologist) {
+                                // Similar concerns reinforce each other
+                                this.bleedFactor = Math.min(this.bleedFactor + 0.02, 1);
+                            } else {
+                                // Different types create tension
+                                this.bleedFactor = Math.max(this.bleedFactor - 0.01, 0);
+                            }
+                        }
+                    }
+                });
+
+                if (currentResonance > 0.7) {
+                    // When resonance is high, anthropologist concerns fade
+                    if (this.isAnthropologist) {
+                        this.size = Math.max(this.size * 0.99, 0.5);
+                        this.speed *= 0.98;
+                    } else {
+                        // Informant concerns become more visible
+                        this.size = Math.min(this.size * 1.01, 4);
+                        const tdx = this.targetPoint.x - this.x;
+                        const tdy = this.targetPoint.y - this.y;
+                        const tdist = Math.sqrt(tdx * tdx + tdy * tdy);
+                        const ritualInfluence = Math.sin(time * 0.5 + (this.ritual || 0)) * 0.3;
+                        this.x += (tdx / tdist) * this.speed * (2 + ritualInfluence);
+                        this.y += (tdy / tdist) * this.speed * (2 + ritualInfluence);
+                    }
+                } else {
+                    if (isAttending && currentResonance > 0.5) {
+                        this.organicFactor *= 0.95;
+                    } else {
+                        this.organicFactor = Math.min(this.organicFactor * 1.05, 0.5);
+                    }
+                    
+                    const concernInfluence = Math.sin(time * (0.1 + this.concern * 0.05));
+                    const bleedInfluence = Math.cos(time * (0.1 + this.bleedFactor * 0.1));
+                    
+                    this.x += Math.sin(time * this.organicFactor) * this.speed * (1 + concernInfluence);
+                    this.y += Math.cos(time * this.organicFactor) * this.speed * (1 + bleedInfluence);
+                }
+
+                // Boundary check
+                if (this.x < 0) this.x = width;
+                if (this.x > width) this.x = 0;
+                if (this.y < 0) this.y = height;
+                if (this.y > height) this.y = 0;
+
+                // Mouse influence
+                if (dist < 200) {
+                    const force = (200 - dist) / 200;
+                    this.x += (dx / dist) * force * 2;
+                    this.y += (dy / dist) * force * 2;
+                    targetResonance = Math.max(targetResonance, force);
+                }
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                
+                if (this.isAnthropologist) {
+                    // Red particles for anthropologist concerns
+                    const opacity = 0.3 + currentResonance * 0.7;
+                    ctx.fillStyle = `rgba(255, 0, 0, ${opacity * (1 - currentResonance * 0.7)})`;
+                } else {
+                    // Green particles for informant concerns
+                    const opacity = 0.3 + currentResonance * 0.7;
+                    ctx.fillStyle = `rgba(0, 255, 0, ${opacity * (1 + currentResonance * 0.3)})`;
+                }
+                ctx.fill();
+            }
+        }
+
+        function resize() {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+            hiddenCanvas.width = width;
+            hiddenCanvas.height = height;
+            
+            // Regenerate constellation points after resize
+            constellationPoints = [];
+            generateConstellationPoints();
+        }
+
+        function showConcernInsight() {
+            if (Math.random() < currentResonance) {
+                // When resonance is high, show more informant concerns
+                const concern = compellingConcerns[currentConcernIndex];
+                const aspect = concern.aspects[Math.floor(Math.random() * concern.aspects.length)];
+                const observed = concern.observed[Math.floor(Math.random() * concern.observed.length)];
+                const ritual = concern.rituals[Math.floor(Math.random() * concern.rituals.length)];
+                const insight = `Potter's Concern:\n${concern.theme}:\n${aspect}\nObserved: ${observed}\nRitual: ${ritual}`;
+                concernText.textContent = insight;
+            } else {
+                // When resonance is low, show anthropologist's concerns
+                const concern = anthropologistConcerns[Math.floor(Math.random() * anthropologistConcerns.length)];
+                concernText.textContent = `Anthropologist's Concern:\n${concern}`;
+            }
+            
+            concernText.style.opacity = 1;
+            setTimeout(() => {
+                concernText.style.opacity = 0;
+            }, 4000);
+        }
+
+        function updateCurrentConcern() {
+            const concern = concerns[currentConcernIndex];
+            currentConcernDisplay.textContent = `${concern.theme}\n${concern.aspects[Math.floor(Math.random() * concern.aspects.length)]}`;
+        }
+
+        function createDistraction() {
+            const div = document.createElement('div');
+            div.className = 'distraction';
+            div.textContent = distractionTexts[Math.floor(Math.random() * distractionTexts.length)];
+            
+            // Random position
+            div.style.left = Math.random() * (width - 200) + 'px';
+            div.style.top = Math.random() * (height - 100) + 'px';
+            
+            document.body.appendChild(div);
+            
+            // Fade in
+            setTimeout(() => {
+                div.style.opacity = '0.7';
+            }, 100);
+            
+            // Remove after some time
+            setTimeout(() => {
+                div.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(div);
+                }, 500);
+            }, 3000);
+            
+            // Create dissonance
+            targetResonance *= 0.5;
+            currentResonance *= 0.5;
+        }
+
+        let time = 0;
+        function animate() {
+            time += 0.016;
+            ctx.clearRect(0, 0, width, height);
+
+            // Randomly create distractions
+            if (Math.random() < 0.01) {
+                createDistraction();
+            }
+
+            // Update resonance with attendance factor
+            currentResonance = currentResonance * 0.95 + targetResonance * 0.05;
+            if (!isAttending) {
+                currentResonance *= 0.9;
+            }
+            targetResonance *= 0.95;
+            resonanceLevel.style.height = `${currentResonance * 100}%`;
+            
+            // Update audio
+            updateAudio();
+
+            // Create new particles if needed
+            if (particles.length < 100) {
+                particles.push(new Particle(Math.random() * width, Math.random() * height));
+            }
+
+            // Update and draw particles
+            particles.forEach(p => {
+                p.update(time);
+                p.draw();
+            });
+
+            // Draw connection lines between nearby particles
+            ctx.beginPath();
+            for (let i = 0; i < particles.length; i++) {
+                for (let j = i + 1; j < particles.length; j++) {
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
+                    const dist = Math.sqrt(dx * dx + dy * dy);
+                    if (dist < 100) {
+                        ctx.moveTo(particles[i].x, particles[i].y);
+                        ctx.lineTo(particles[j].x, particles[j].y);
+                    }
+                }
+            }
+            ctx.strokeStyle = `rgba(0, 255, 0, ${currentResonance * 0.3})`;
+            ctx.stroke();
+
+            // Draw constellation points when resonance is high
+            if (currentResonance > 0.7) {
+                ctx.beginPath();
+                constellationPoints.forEach((point, i) => {
+                    const nextPoint = constellationPoints[(i + 1) % constellationPoints.length];
+                    ctx.moveTo(point.x, point.y);
+                    ctx.lineTo(nextPoint.x, nextPoint.y);
+                });
+                ctx.strokeStyle = `rgba(0, 255, 0, ${(currentResonance - 0.7) * 3})`;
+                ctx.stroke();
+            }
+
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', resize);
+        
+        canvas.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            // Update attendance state
+            const dx = e.clientX - mousePos.x;
+            const dy = e.clientY - mousePos.y;
+            const moveSpeed = Math.sqrt(dx * dx + dy * dy);
+            
+            // Fast movement reduces attendance
+            if (moveSpeed > 20) {
+                isAttending = false;
+                cursor.textContent = 'ðŸ‘ï¸â€ðŸ—¨ï¸'; // distracted eye
+            } else {
+                isAttending = true;
+                cursor.textContent = 'ðŸ‘ï¸'; // attending eye
+            }
+            
+            mousePos.x = e.clientX;
+            mousePos.y = e.clientY;
+        });
+
+        canvas.addEventListener('click', (e) => {
+            if (currentResonance > 0.7) {
+                showConcernInsight();
+                currentConcernIndex = (currentConcernIndex + 1) % concerns.length;
+                updateCurrentConcern();
+            }
+            
+            // Initialize audio on first click (browser requirement)
+            if (!audioContext) {
+                initAudio();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.code === 'Space') {
+                particles = [];
+                currentResonance = 0;
+                targetResonance = 0;
+                updateCurrentConcern();
+            } else if (e.code === 'KeyM') {
+                isAudioEnabled = !isAudioEnabled;
+                audioToggle.textContent = `Sound: ${isAudioEnabled ? 'ON' : 'OFF'}`;
+                if (audioContext) {
+                    gainNode.gain.value = 0;
+                }
+            }
+        });
+
+        audioToggle.addEventListener('click', () => {
+            isAudioEnabled = !isAudioEnabled;
+            audioToggle.textContent = `Sound: ${isAudioEnabled ? 'ON' : 'OFF'}`;
+            if (audioContext) {
+                gainNode.gain.value = 0;
+            }
+        });
+
+        resize();
+        updateCurrentConcern();
+
+        // Audio context for harmonic drones
+        let audioCtx = null;
+        let oscillators = [];
+        let gainNodes = [];
+        const harmonicRatios = [1, 1.5, 2, 2.5, 3]; // Natural harmonic series
+        const baseFrequency = 220; // A3 as base frequency
+
+        function initAudio() {
+            audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+            
+            // Create harmonic oscillators
+            harmonicRatios.forEach(ratio => {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                
+                osc.type = 'sine';
+                osc.frequency.value = baseFrequency * ratio;
+                gain.gain.value = 0;
+                
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                
+                oscillators.push(osc);
+                gainNodes.push(gain);
+            });
+        }
+
+        // Moments of attention that emerge during observation
+        const emergentMoments = [
+            "The way he tests clay with his thumb",
+            "Sunlight catching dust in the workshop",
+            "His hand remembers the shape",
+            "Workshop radio plays softly",
+            "Careful placement of tools",
+            "Morning light through windows",
+            "Quiet focus while centering",
+            "Hands moving without thought",
+            "Steam rising from coffee cup",
+            "Shadows growing longer",
+            "Wind through the cypress",
+            "Birds at the water barrel",
+            "Worn smooth workbench edge",
+            "Breath matching wheel speed",
+            "Clay dust in sunbeams",
+            "Crickets starting early",
+            "Screen door creaking shut",
+            "Rain on the tin roof"
+        ];
+
+        class Experience {
+            constructor(x, y) {
+                this.x = x;
+                this.y = y;
+                this.vx = 0;
+                this.vy = 0;
+                this.size = Math.random() * 2 + 1;
+                this.moment = emergentMoments[Math.floor(Math.random() * emergentMoments.length)];
+                this.opacity = 0;
+                this.age = 0;
+                this.lifespan = Math.random() * 300 + 200;
+            }
+
+            update() {
+                // Gentle, organic movement
+                this.vx += (Math.random() - 0.5) * 0.1;
+                this.vy += (Math.random() - 0.5) * 0.1;
+                
+                // Dampen velocity for smooth movement
+                this.vx *= 0.99;
+                this.vy *= 0.99;
+                
+                this.x += this.vx;
+                this.y += this.vy;
+                
+                // Fade in and out gently
+                this.age++;
+                if (this.age < 60) {
+                    this.opacity = this.age / 60;
+                } else if (this.age > this.lifespan - 60) {
+                    this.opacity = (this.lifespan - this.age) / 60;
+                }
+                
+                return this.age < this.lifespan;
+            }
+
+            draw(ctx) {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(255, 255, 255, ${this.opacity * 0.3})`;
+                ctx.fill();
+            }
+        }
+
+        let experiences = [];
+        let mouseX = 0, mouseY = 0;
+        let lastMoveTime = Date.now();
+        let stillness = 0;
+
+        function updateAudio() {
+            if (!audioCtx) return;
+            
+            // Update harmonic drone based on stillness
+            gainNodes.forEach((gain, i) => {
+                const targetGain = Math.min(stillness * 0.1, 0.1) / (i + 1);
+                gain.gain.setTargetAtTime(targetGain, audioCtx.currentTime, 0.1);
+            });
+        }
+
+        function update() {
+            // Update stillness based on mouse movement
+            const timeSinceMove = (Date.now() - lastMoveTime) / 1000;
+            stillness = Math.min(timeSinceMove, 10) / 10;
+
+            // Create new experiences during moments of stillness
+            if (stillness > 0.7 && Math.random() < 0.02) {
+                experiences.push(new Experience(
+                    mouseX + (Math.random() - 0.5) * 100,
+                    mouseY + (Math.random() - 0.5) * 100
+                ));
+            }
+
+            // Update existing experiences
+            experiences = experiences.filter(exp => exp.update());
+
+            // Update audio
+            updateAudio();
+        }
+
+        function draw() {
+            ctx.fillStyle = 'rgba(0, 0, 0, 0.1)';
+            ctx.fillRect(0, 0, width, height);
+
+            experiences.forEach(exp => exp.draw(ctx));
+
+            // Draw stillness indication (very subtle)
+            if (stillness > 0.5) {
+                ctx.fillStyle = `rgba(255, 255, 255, ${stillness * 0.1})`;
+                ctx.textAlign = 'center';
+                ctx.font = '16px serif';
+                const moment = emergentMoments[Math.floor(Date.now() / 5000) % emergentMoments.length];
+                ctx.fillText(moment, width/2, height/2);
+            }
+        }
+
+        canvas.addEventListener('mousemove', (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+            lastMoveTime = Date.now();
+        });
+
+        canvas.addEventListener('click', () => {
+            if (!audioCtx) {
+                initAudio();
+            }
+        });
+
+        function animate() {
+            update();
+            draw();
+            requestAnimationFrame(animate);
+        }
+
+        animate();
+    </script>
+</body>
+</html>
