@@ -462,10 +462,6 @@
 
                 displayCards('sohn-cards', sohnData, 'sohn', '🪞', 'S');
                 displayCards('wikan-cards', wikanData, 'wikan', '〰️', 'W');
-
-                initializeConnections();
-                initializeSearch();
-                initializeNotes();
             } catch (error) {
                 console.error('Error loading data:', error);
             }
@@ -508,10 +504,9 @@
                     </div>
                 `;
 
-                container.appendChild(cardElement);
-
-                // Add click handler for connections
                 cardElement.addEventListener('click', () => handleCardClick(cardElement.id));
+
+                container.appendChild(cardElement);
             });
         }
 
@@ -537,7 +532,7 @@
                     .attr('d', 'M0,-5L10,0L0,5');
             });
 
-            // Add event listeners for connection types
+            // Add event listeners
             document.querySelectorAll('.connection-type').forEach(button => {
                 button.addEventListener('click', () => {
                     document.querySelectorAll('.connection-type').forEach(b => b.classList.remove('active'));
@@ -546,7 +541,6 @@
                 });
             });
 
-            // Add clear button handler
             document.querySelector('.clear').addEventListener('click', () => {
                 state.connections = [];
                 state.selectedPlatform = null;
@@ -556,7 +550,6 @@
                 renderConnections();
             });
 
-            // Add export button handler
             document.querySelector('.export-btn').addEventListener('click', () => {
                 const data = {
                     connections: state.connections,
@@ -581,12 +574,10 @@
                 URL.revokeObjectURL(url);
             });
 
-            // Add scroll handlers for connection updates
             document.querySelectorAll('.platform-column').forEach(column => {
                 column.addEventListener('scroll', renderConnections);
             });
 
-            // Add window resize handler
             window.addEventListener('resize', renderConnections);
         }
 
@@ -595,7 +586,6 @@
             const searchOptions = document.querySelectorAll('.search-option');
             let currentSearchSide = 'both';
 
-            // Handle search option selection
             searchOptions.forEach(option => {
                 option.addEventListener('click', () => {
                     searchOptions.forEach(opt => opt.classList.remove('active'));
@@ -605,7 +595,6 @@
                 });
             });
 
-            // Handle search input
             searchInput.addEventListener('input', () => {
                 performSearch(searchInput.value, currentSearchSide);
             });
@@ -636,7 +625,6 @@
                 }
             });
 
-            // Refresh connections after search
             renderConnections();
         }
 
@@ -655,12 +643,10 @@
                     card.classList.remove('selected');
                     state.selectedPlatform = null;
                 } else {
-                    // Create new connection
                     const sourceCard = document.getElementById(state.selectedPlatform);
                     const sourceType = sourceCard.classList.contains('sohn') ? 'sohn' : 'wikan';
                     const targetType = card.classList.contains('sohn') ? 'sohn' : 'wikan';
 
-                    // Only allow connections between different types
                     if (sourceType !== targetType) {
                         state.connections.push({
                             source: state.selectedPlatform,
@@ -670,7 +656,6 @@
                         renderConnections();
                     }
 
-                    // Reset selection
                     document.querySelectorAll('.platform-card').forEach(c => c.classList.remove('selected'));
                     state.selectedPlatform = null;
                 }
@@ -695,7 +680,6 @@
                 const sourceY = sourceRect.top + (sourceRect.height / 2) - containerRect.top;
                 const targetY = targetRect.top + (targetRect.height / 2) - containerRect.top;
                 
-                // Only render if both elements are visible
                 if (sourceY < 0 || sourceY > containerRect.height || 
                     targetY < 0 || targetY > containerRect.height) {
                     return;
@@ -819,7 +803,6 @@
                 noteData.y = y;
 
                 if (noteData.attachedTo) {
-                    // Store the offset from the attachment point
                     if (noteData.attachedTo.type === 'card') {
                         const card = document.getElementById(noteData.attachedTo.cardId);
                         const cardRect = card.getBoundingClientRect();
@@ -853,9 +836,6 @@
         function initializeNotes() {
             const container = document.querySelector('.visualization-container');
             const indicator = document.querySelector('.note-target-indicator');
-            let isDragging = false;
-            let currentNote = null;
-            let attachTarget = null;
 
             // Double click to create free-floating note
             container.addEventListener('dblclick', (e) => {
@@ -934,7 +914,6 @@
 
                 container.appendChild(note);
 
-                // Store note data
                 state.notes[noteId] = {
                     x: options.x,
                     y: options.y,
@@ -942,10 +921,8 @@
                     attachedTo: options.attachedTo
                 };
 
-                // Make note draggable
                 makeDraggable(note);
 
-                // Add note event listeners
                 const textarea = note.querySelector('.note-textarea');
                 textarea.addEventListener('input', () => {
                     state.notes[noteId].text = textarea.value;
@@ -966,20 +943,6 @@
 
                 updateNoteConnector(note);
             }
-
-            // Add scroll handler for note positions
-            document.querySelectorAll('.platform-column').forEach(column => {
-                column.addEventListener('scroll', () => {
-                    updateNotePositions();
-                    renderConnections();
-                });
-            });
-
-            // Add window resize handler for note positions
-            window.addEventListener('resize', () => {
-                updateNotePositions();
-                renderConnections();
-            });
         }
 
         function updateNoteConnector(note) {
@@ -1046,7 +1009,25 @@
         }
 
         // Load data when the page loads
-        document.addEventListener('DOMContentLoaded', loadData);
+        loadData().then(() => {
+            initializeConnections();
+            initializeSearch();
+            initializeNotes();
+        });
+
+        // Add scroll handler for note positions
+        document.querySelectorAll('.platform-column').forEach(column => {
+            column.addEventListener('scroll', () => {
+                updateNotePositions();
+                renderConnections();
+            });
+        });
+
+        // Add window resize handler for note positions
+        window.addEventListener('resize', () => {
+            updateNotePositions();
+            renderConnections();
+        });
     </script>
 </body>
 </html>
