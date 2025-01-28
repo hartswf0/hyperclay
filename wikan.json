@@ -1,0 +1,788 @@
+[
+  {
+    "card_id": "Wikan_Morality_Pragmatics",
+    "header": "Morality and Pragmatics in Fieldwork",
+    "perfect_quote": "\"Thus the concern is with morality and pragmatics, and implications for fieldwork method and anthropological representation. I advocate a focus on per- sons in lived situations, rather than discourse, and suggest that resonance is the crucial-and charitable-orientation that allows us to go beyond the words to en- gage people's compelling concerns.\"",
+    "key_features": [
+      "Ethical Orientation: Fieldwork should be guided by moral considerations, focusing on 'how best to learn in order to live.'",
+      "Lived Experience: Prioritizes understanding 'persons in lived situations' over abstract theoretical discourse.",
+      "Resonance as Method: Emphasizes 'resonance' as a key approach to connect with people's concerns, moving beyond superficial interpretations."
+    ],
+    "properties": {
+      "Practical Application": "Apply ethical considerations and practical reason to understand how people navigate their lives and make decisions based on their experiences. Use 'resonance' as a tool to engage deeply with the people being studied, rather than relying on abstract theories.",
+      "Morphism": "Influences the approach by highlighting the need for fieldwork to not only be descriptive, but also ethically and morally grounded, with a focus on practical lived experiences.",
+      "Tags": "morality, pragmatics, lived experience, resonance, ethics"
+    }
+  },
+  {
+    "card_id": "Wikan_Critique_Decontextualization",
+    "header": "Critique of Decontextualized Representation",
+    "perfect_quote": "\"I had written a book that aimed to convey the lived experience of actual Balinese, yet I had not told what they did for a living, or what their political (in the narrow sense of the term) concerns were. I had, paradoxically, preached the virtues of contextualizing interpretations and positioning actors and anthropolo- gist while leaving actors, in these respects, floating in the air\"",
+    "key_features": [
+      "Incomplete Portrayal: Critiques representations that lack information about people's livelihood and political realities.",
+      "Contextualization Paradox: Points out the paradox of advocating contextualization while failing to incorporate essential details of people's lives.",
+      "Actors Adrift: Highlights that neglecting key aspects of people's lives leaves them 'floating in the air' within the analysis."
+    ],
+    "properties": {
+      "Practical Application": "Ensure that representations include details about people’s daily lives, livelihoods, and political contexts, so they are not left 'floating in the air' in your analysis.",
+      "Morphism": "Challenges the notion that 'contextualization' is sufficient without attention to material conditions and political realities. It requires a more holistic view of the lives of the people being studied, including economic and political factors.",
+      "Tags": "decontextualization, lived experience, holistic view, political context, livelihood"
+    }
+  },
+  {
+    "card_id": "Wikan_Beyond_Words",
+    "header": "Going Beyond Words: Practical Reason and Human Experience",
+    "perfect_quote": "\"advocates a procedure o going beyond words, of looking past outer trappings and semblances to that which count more, similarities in human experience.' Moreover, they converge in being anchored in 'prac- tical reason' (Schutz 1970)-a universe of moral discourse about how best to learn in order to live,\"",
+    "key_features": [
+      "Transcend Surface: Advocates looking beyond surface appearances to find shared human experiences.",
+      "Practical Reason: Emphasizes the importance of 'practical reason' as a basis for understanding how people live and learn.",
+      "Moral Discourse: Frames understanding as a moral discourse focused on learning to live better."
+    ],
+    "properties": {
+      "Practical Application": "In analysis, focus on practical reasoning, moral dimensions of decision making, and shared human experiences. Use the method of 'going beyond words' to understand actions, rather than merely observing surface behaviors.",
+      "Morphism": "Shapes a perspective that sees 'practical reason' as a key to understanding motivations, and connects ethical considerations with practical aspects of human existence. It moves beyond a purely theoretical approach and emphasizes the moral and practical implications of fieldwork and representation.",
+      "Tags": "practical reason, shared experience, moral discourse, beyond words, surface appearances"
+    }
+  },
+  {
+    "card_id": "Wikan_Grounded_Theory",
+    "header": "Grounded Theory: The Primacy of Experience",
+    "perfect_quote": "\"Robert Paul has warned us to take care not to build theories that contradict our 'own actual experience of what being alive is like'\"",
+    "key_features": [
+      "Observe First: Prioritizes direct engagement and interaction; emphasizes that experience comes before theory.",
+      "Theory as a Guide: Sees theory as a tool for understanding, not as a fixed framework that dictates interpretations.",
+      "Authentic Analysis: Highlights that analysis should align with actual observations and experiences, and should be questioned if they don't."
+    ],
+    "properties": {
+      "Practical Application": "Use your own experience as a reference point. If your understanding doesn't align with what you see or experience, reconsider your approach.",
+      "Morphism": "Influences Schon by emphasizing a balanced approach between theoretical frameworks and direct observation of lived experience, grounding analysis in real, practical situations.",
+      "Tags": "authenticity, grounded, experiential, observation"
+    }
+  },
+  {
+    "card_id": "Wikan_Karma_Pala_Taqdir",
+    "header": "Divergent Beliefs: Karma Pala vs. Taqdir",
+    "perfect_quote": "\"Karma pala is the doctrine of reincarnation, according to which one's fate in this life is determined by actions (of oneself or the ancestors) in previous lives. But for Muslims there is only one life; and so taqdir (fate or destiny) refers merely to God's omnipotence in deciding what the course of that life will be. Nor, for Muslims, should oath have any meaning, for the ancestors are powerless to afflict you by what they do or fail to do. Only God has such power.\"",
+    "key_features": [
+      "Karma Pala:  A belief in reincarnation where present life is shaped by past actions.",
+      "Taqdir: A Muslim belief that God determines one's fate within a single life.",
+      "Incompatible Concepts: Highlights the differing views on fate, afterlife, and the role of ancestors between the two belief systems."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that different belief systems have their own frameworks for understanding the world, and these frameworks may not align with each other.",
+      "Morphism": "Demonstrates the distinction between concepts and their interpretations. It highlights the importance of recognizing the distinct belief systems that shape different understandings of reality. This impacts how to approach translation and interpretation across cultures.",
+      "Tags": "karma pala, taqdir, reincarnation, fate, religious beliefs, cultural differences"
+    }
+  },
+  {
+    "card_id": "Wikan_Afflicted_Soul",
+    "header": "Initial Interpretation: Wishful Thinking",
+    "perfect_quote": "\"as the wish- ful thinking of an afflicted soul desperately in search of meaning and relief. Perhaps so did you? I did not even ask: what could she be meaning to say by her words? What was at stake? To me, karma pala and taqdir are \"completely different,\" not at all \"exactly the same.\"",
+    "key_features": [
+      "Skepticism: Describes an initial reaction that dismisses a reconciliation of differing concepts as wishful thinking.",
+      "Missed Opportunity: Highlights the failure to explore the deeper meaning behind the person's words.",
+      "Conceptual Entrapment: Demonstrates the tendency to get stuck on literal interpretations."
+    ],
+    "properties": {
+      "Practical Application": "Avoid dismissing interpretations as wishful thinking. Instead, question your assumptions, and try to understand what is at stake for the speaker, even if the meaning seems implausible at first glance. This requires a shift from seeking literal meanings to understanding intentions and context.",
+      "Morphism": "Challenges a purely objective approach, highlighting that initial interpretations can be heavily influenced by pre-existing biases and a failure to engage with the speaker's intentions and emotional state. It emphasizes the need to go beyond literal meaning to understand what is at stake. This approach influences how to be receptive in fieldwork encounters.",
+      "Tags": "wishful thinking, skepticism, interpretation, literal meaning, meaning-making"
+    }
+  },
+  {
+    "card_id": "Wikan_Resonance_Self",
+    "header": "Creating Inner Resonance",
+    "perfect_quote": "\"I must create resonance in myself with the people and the problems I seek to understand.\"",
+    "key_features": [
+      "Internal Alignment: Prioritizes the need for the researcher to develop an internal alignment with the people being studied.",
+      "Personal Connection: Stresses the importance of a deep, personal connection with the subjects to understand their issues.",
+      "Foundation for Understanding: Indicates that self-resonance is a prerequisite for understanding and appreciation."
+    ],
+    "properties": {
+      "Practical Application": "Before trying to understand others, create a personal resonance with their experiences and issues, ensuring that one is internally aligned with the problems and perspectives of the community one seeks to understand.",
+      "Morphism": "This emphasis on inner resonance shapes the need for a subjective, empathetic approach as a foundational aspect of research. The idea that understanding starts from personal connection significantly influences the method and orientation of the researcher towards the study.",
+      "Tags": "resonance, self-awareness, empathy, personal connection, understanding"
+    }
+  },
+  {
+    "card_id": "Wikan_Resonance_Feeling_Thought",
+    "header": "Resonance: Integrating Feeling and Thought",
+    "perfect_quote": "\"Without resonance there can be no understanding, no appre- ciation. But resonance requires you [and here he looked entreatingly at me] to apply feeling as well as thought. Indeed, feeling is the more essential, for without feeling we'll remain entangled in illusions\"",
+    "key_features": [
+      "Essential for Understanding: Highlights that 'resonance' is essential for true understanding and appreciation.",
+      "Feeling and Thought: Stresses the necessity of applying both feeling and thought in the process of understanding.",
+      "Primacy of Feeling: Suggests that feeling is more crucial than thought to avoid being caught in illusions."
+    ],
+    "properties": {
+      "Practical Application": "Engage both your intellect and emotions to create a deeper resonance. Understand that the feeling is a necessary component to move beyond surface-level engagement and to have a more authentic appreciation of the context.",
+      "Morphism": "This highlights the need to balance intellect with emotions in fieldwork. It challenges the traditional view that scientific inquiry should rely solely on detached intellectual analysis, instead promoting a more holistic approach by integrating emotion into the research process.",
+      "Tags": "resonance, feeling, thought, understanding, appreciation, emotion"
+    }
+  },
+  {
+    "card_id": "Wikan_Western_Thought_Critique",
+    "header": "Critique of Western Ways of Knowing",
+    "perfect_quote": "\"They also suspect that Westerners see it differently: that we think we can think only with our thoughts and yet arrive at genuine insight. To Balinese, this is like \"reaching for the sky with a short string,\" basing one's search for knowledge on a self- eroding foundation. Without feeling it is impossible to appreciate (men- ghayati) any situation or problem.\"",
+    "key_features": [
+      "Western Bias: Points out the tendency in Western thought to prioritize intellect over emotion.",
+      "Inadequate Approach: Critiques the Western belief that genuine insight can be achieved through thought alone.",
+      "Limited Knowledge: Suggests that relying solely on thought is like 'reaching for the sky with a short string,' leading to a flawed understanding.",
+      "Importance of Feeling:  Emphasizes that feeling is essential for genuine appreciation and understanding."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that your approach to knowledge may be shaped by Western biases. Engage your feelings and emotions in order to enhance comprehension beyond the limitations of intellectual analysis, ensuring a more complete understanding.",
+      "Morphism": "Challenges the traditional Western emphasis on detached objectivity and intellectual analysis. It shifts the emphasis to the need for a holistic approach to knowing, influenced by the Balinese perspective, and underscores the importance of integrating emotion and feeling into research. It provides a new framework for knowledge acquisition, challenging the limitations of a purely intellectual approach.",
+      "Tags": "western bias, intellect, emotion, feeling, knowledge, appreciation, limitations"
+    }
+  },
+  {
+    "card_id": "Wikan_Resonance_Demands",
+    "header": "Reciprocal Demands of Resonance",
+    "perfect_quote": "\"Resonance thus demands something of both parties to communication, of both reader and au- thor: an effort at feeling-thought; a willingness to engage with another world, life, or idea; an ability to use one's experience-as the Muslim did with the Hindu balian-to try to grasp, or convey, meanings that reside neither in words, \\\"facts,\\\" nor text but are evoked in the meeting of one experiencing subject with another or with a text.\"",
+    "key_features": [
+      "Mutual Effort: Resonance requires active participation from all parties involved in the communication process, including both the creator and the audience.",
+      "Feeling-Thought: It emphasizes the need to combine emotional engagement and intellectual understanding.",
+      "Openness to Experience: A willingness to connect with different perspectives, ways of life, and ideas is needed.",
+      "Experiential Application: It highlights the use of personal experiences to understand and communicate meaning beyond literal words, facts, and texts.",
+      "Emergent Meaning: It suggests that meaning is not fixed but arises from the interaction between individuals or with a text, rather than being inherent in the words themselves."
+    ],
+    "properties": {
+      "Practical Application": "When communicating, be prepared to fully engage both your intellect and emotions. Also, be open to different perspectives, and use your own experiences to find common ground, aiming to create a shared understanding that goes beyond the surface level of words or text. Recognize that meaning is created in the interaction, rather than found in fixed concepts.",
+      "Morphism": "This emphasizes the dynamic and relational nature of communication, which relies on active engagement and mutual effort. The idea that meaning is emergent reorients how to perceive interpretation as an active process of co-creation, rather than a passive reading. This encourages a re-evaluation of what communication is, how to engage with it, and how to study it.",
+      "Tags": "resonance, communication, feeling-thought, engagement, experience, meaning-making, interaction"
+    }
+  },
+  {
+    "card_id": "Wikan_Grounded_Interpretations",
+    "header": "Grounded Interpretations",
+    "perfect_quote": "\"To grasp how people actually experience their lives, we need to attend ... not [to] their terms for gods, institutions, calendars and rituals so much as [to] the concepts with which they feel and think about, and handle, the tasks and tribulations of their individual existences.\"",
+    "key_features": [
+      "Focus on Lived Experience: Understanding people's lives requires attending to their everyday concepts, feelings, and actions.",
+      "Beyond Formal Structures: It's not sufficient to examine only terms for gods, institutions, or rituals.",
+      "Emphasis on Daily Challenges: Focus should be on how people use their concepts to navigate the tasks and tribulations of their lives."
+    ],
+    "properties": {
+      "Practical Application": "When interpreting experiences, prioritize the everyday concepts and feelings people use to navigate their lives over formal religious or institutional structures. This approach provides a more authentic and insightful view of their lived reality.",
+      "Morphism": "This quote reorients how to approach interpretation by emphasizing the tangible, lived dimensions of experience rather than abstract or formal categories.",
+      "Tags": "lived-experience, interpretation, daily-life, authentic-understanding, concepts-of-existence"
+    }
+  },
+  {
+    "card_id": "Wikan_Contingency_of_Language",
+    "header": "Contingency of Language",
+    "perfect_quote": "\"Davidson faces up to the con- tingency of language, to the fact that truths are made rather than found, because all vocabularies are manmade, they do not \\\"fit\\\" the world- indeed, as Rorty reminds us, \\\"most of reality is indifferent to our descriptions of it\\\"\"",
+    "key_features": [
+      "Truth as Constructed: Truths are not discovered, but rather created by humans through language.",
+      "Language as Man-Made: All vocabularies are human constructs and therefore do not naturally align with the world.",
+      "Reality's Indifference: Reality itself is not shaped by nor does it conform to how humans describe it."
+    ],
+    "properties": {
+      "Practical Application": "Be aware that language is not a neutral medium for describing the world but a tool created by humans. When engaging with different perspectives, recognize that words don’t reflect an inherent truth but are constructs that shape how reality is perceived.",
+      "Morphism": "This quote challenges the idea of objective truth and highlights the influence of human language and perception in shaping understanding and reality.",
+      "Tags": "language-contingency, constructed-truth, man-made-vocabularies, reality-indifference, human-perspective"
+    }
+  },
+  {
+    "card_id": "Rorty_World_Does_Not_Speak",
+    "header": "The World Does Not Speak",
+    "perfect_quote": "\"Rorty's words, \\\"The world does not speak. Only we do\\\"\"",
+    "key_features": [
+      "Human Agency in Description: Humans are the active agents in making meaning and describing the world.",
+      "World's Silence: The world does not inherently possess a voice or an interpretation of itself; therefore, humans create those interpretations."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that all descriptions are human constructions, not reflections of an inherent truth. When exploring new ideas, remember that your voice is what brings meaning to your perception of the world.",
+      "Morphism": "This quote suggests that truth and understanding emerge from human perspectives and engagement rather than the world itself. It encourages a recognition of our active role in creating meaning, and therefore, an awareness of the inherent subjectivity in how we perceive reality.",
+      "Tags": "human-agency, world-silence, meaning-creation, subjective-perception, active-interpretation"
+    }
+  },
+  {
+    "card_id": "Davidson_Language_as_Tool",
+    "header": "Language as a Tool",
+    "perfect_quote": "\"Davidson suggests we regard language not as a medium but more like a tool that works better or worse for the tasks at hand. As Mark Hobart notes: 'We are back not just to what words mean but what people do in using them'\"",
+    "key_features": [
+      "Language as a tool: Language is not a medium for expressing intrinsic meaning but an instrument for action.",
+      "Focus on Pragmatics: The emphasis should be on what people do with words and how they use them, rather than just the meaning of words."
+    ],
+    "properties": {
+      "Practical Application": "When communicating, focus on the intentions and effects of words. Instead of getting caught up with literal meanings, consider language as a tool for getting things done. Pay close attention to how people are using words rather than just what the words themselves mean.",
+      "Morphism": "This perspective shifts the focus from language as a representation of meaning to language as a pragmatic instrument that shapes social interactions and outcomes. This promotes an understanding of communication as an active and goal-oriented practice rather than a passive transfer of information.",
+      "Tags": "language-tool, pragmatic-language, intention, action, communicative-effect, use-of-language"
+    }
+  },
+  {
+    "card_id": "Wikan_Anthropological_Tools",
+    "header": "Anthropological Texts as Tools",
+    "perfect_quote": "\"seemed unfit for the purpose at hand, inadequate as tools, at least for me. Had I relied on the concepts of theatricality, aestheticism, and faceless social personae I would not have been able ever to 'meet' Balinese. In other words, I had read the anthropological texts not merely as providing statements about cosmology but also as sets of tools for orienting oneself pragmatically in a Balinese world.\"",
+    "key_features": [
+      "Texts as Orienting Tools: Anthropological texts should be viewed as tools that help orient the researcher in a specific context rather than as pure statements of fact.",
+      "Limitations of Concepts: Relying on concepts like theatricality or faceless social personae can hinder authentic engagement with the people being studied.",
+      "Pragmatic Orientation: Texts should be used to understand and engage with a culture on a pragmatic level."
+    ],
+    "properties": {
+      "Practical Application": "Approach anthropological texts as practical guides for understanding a culture rather than as definitive statements about it. Be aware that certain concepts can limit your ability to truly connect with people, and seek a more pragmatic understanding of their world.",
+      "Morphism": "This highlights that knowledge is not just abstract, but should equip us to engage in a specific context. It underscores that theoretical frameworks are useful tools, but should be seen as practical devices rather than as objective, neutral truths.",
+      "Tags": "anthropological-texts, practical-tools, pragmatic-orientation, authentic-engagement, cultural-understanding"
+    }
+  },
+  {
+    "card_id": "Wikan_Words_as_Effects",
+    "header": "Words as Effects",
+    "perfect_quote": "\"if words are ways of producing effects, then attending too closely to words for their 'meaning' may sink one deep into quagmires.\"",
+    "key_features": [
+      "Words as Tools: Words are not just containers of meaning, but instruments that produce effects.",
+      "Overemphasis on Meaning: Focusing too much on the literal meaning of words can lead to confusion and misunderstanding."
+    ],
+    "properties": {
+      "Practical Application": "When analyzing communication, consider the pragmatic effect of words rather than fixating on their literal meanings. Focus on what the words are intended to do, not just what they denote, to avoid getting bogged down in semantic details.",
+      "Morphism": "This quote emphasizes a shift from viewing language as a medium for transmitting fixed meanings to a tool for social action and influence.",
+      "Tags": "words-effects, pragmatic-meaning, communication-tool, semantic-trap, language-use"
+    }
+  },
+  {
+    "card_id": "Wikan_Transcending_Words",
+    "header": "Transcending Words",
+    "perfect_quote": "\"It may be necessary, compellingly necessary, to reduce the words to a more true-to-life role than much current anthropology does. And to transcend the words, we need to attend to the speaker's intention, and the social position they emanate from, to judge correctly what they are doing. Just as we would not read a love letter with the same meticulous attention we apply to the fine print of an insurance policy, it is a matter of keeping the proper perspective.\"",
+    "key_features": [
+      "Reduce Focus on Words: There's a need to diminish the emphasis on words in anthropological analysis.",
+      "Focus on Intention and Social Position:  Understanding requires attending to the speaker's intentions and their social position.",
+      "Proper Perspective: Different communications demand different levels of scrutiny."
+    ],
+    "properties": {
+      "Practical Application": "To truly understand communication, consider the intent behind the words and the social context from which they come. Adopt a flexible approach to interpretation, recognizing that not all communications should be analyzed with the same level of scrutiny.",
+      "Morphism": "This statement suggests a move beyond purely linguistic analysis to a more holistic approach that encompasses the speaker’s intentions and social context, and implies a more nuanced method of interpretation depending on the situation.",
+      "Tags": "transcending-words, speaker-intention, social-position, context-awareness, interpretive-flexibility, communication-analysis"
+    }
+  },
+  {
+    "card_id": "Wikan_Miracle_of_Communication",
+    "header": "Miracle of Communication",
+    "perfect_quote": "\"miracle that speaker's 'meaning' is communicated at all, given that any utterance can have an almost limitless number of meanings. And yet people are able to understand one another quite well much of the time (1989 :19ff., 23). What Tambiah-following Davidson- refers to as 'the maxim of interpretive charity' (1990:122), and Sperber and Wilson-following Grice (1 957)-as 'the cooperative principle' (1989  :32ff.), is clearly\"",
+    "key_features": [
+      "Complexity of Meaning:  Utterances have multiple potential meanings, making successful communication seem miraculous.",
+      "Successful Communication: Despite the complexity, people understand each other often.",
+      "Interpretive Charity and Cooperation: Understanding is achieved through practices like interpretive charity and the cooperative principle."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that communication is a complex and often surprising process. Approach conversations with a cooperative and charitable mindset, assuming that the other person is attempting to convey a meaningful message. This perspective allows for the possibility of successful communication despite the inherent ambiguity of language.",
+      "Morphism": "This highlights the inherent ambiguity in communication while suggesting ways people effectively navigate this complexity.",
+      "Tags": "communication-miracle, interpretive-charity, cooperative-principle, language-ambiguity, successful-communication"
+    }
+  },
+  {
+    "card_id": "Wikan_Interpretive_Charity_Danger",
+    "header": "Danger of Imputing Commonality",
+    "perfect_quote": "\"is there not a danger here: that in trying to practice such interpretive charity across cultures, we may come to impute to people a commonality with our own experience?\"",
+    "key_features": [
+      "Risk of Projection: Practicing interpretive charity can lead to the risk of projecting one's own experiences and assumptions onto others from different cultures.",
+      "Cultural Relativism Challenge: This poses a challenge to the anthropological understanding that experience is culturally construed and not universally shared."
+    ],
+    "properties": {
+      "Practical Application": "When applying interpretive charity, be mindful of the potential for your own experiences to color your understanding of others.  Actively work to remain aware of, and set aside, your assumptions.",
+      "Morphism": "This quote highlights the challenge of balancing empathy with the recognition of cultural difference.",
+      "Tags": "interpretive-charity, cultural-relativism, projection-bias, cross-cultural-understanding"
+    }
+  },
+  {
+    "card_id": "Wikan_Resonance_Induction",
+    "header": "Inducing Resonance",
+    "perfect_quote": "\"But what 'is' resonance? And how does one induce it? Rosaldo stresses the point of applying one's life experience in realization that this can be an asset, a resource, that will help one to grasp certain phenomena\"",
+    "key_features": [
+      "Resonance as a Tool: Resonance is a mechanism for understanding and requires one to use their own life experiences as a resource.",
+      "Life Experience as Asset: One's personal experiences can be valuable assets that can help one to grasp complex cultural phenomena."
+    ],
+    "properties": {
+      "Practical Application": "To induce resonance, engage with the experiences and perspectives of others by drawing on your own lived experiences as a bridge. Be open to the idea that your experiences can provide a starting point for understanding different cultural contexts and situations.",
+      "Morphism": "This quote emphasizes a bridge between the personal and the shared, suggesting that individual experience is a pathway to understanding broader cultural narratives.",
+      "Tags": "resonance, empathy, life-experience, cultural-understanding, personal-asset"
+    }
+  },
+  {
+    "card_id": "Wikan_Interpretive_Success",
+    "header": "Interpretive Success and Shared Space",
+    "perfect_quote": "\"Interpretive success does not require that the translatee's beliefs come out the same as our own but it does require that they come out intelligible to us.' ... An anthropologist's successful translation and account of another people's beliefs, norms and actions implies that there is some shared space, some shared notions of intelligibility and reasoning (rationality) between the two parties.... Ultimately then the anthropological project of translation of cultures is committed to the maxim of interpretive charity which commits us 'to treating not just our present time-slices, but also our past selves, our ancestors, and members of other cultures past and present, as persons; and that means ... attributing to them shared references'\"",
+    "key_features": [
+      "Intelligibility, not Sameness:  Successful interpretation requires that another's beliefs are intelligible, not identical to our own.",
+      "Shared Space:  Successful cross-cultural understanding depends on a shared space of intelligibility and reasoning.",
+      "Interpretive Charity:  This requires treating others as persons, including those from the past, by recognizing shared references."
+    ],
+    "properties": {
+      "Practical Application": "When engaging with different cultures, prioritize making their beliefs intelligible to you rather than trying to make them match your own. Assume shared references and a common sense of reasonability in order to allow for a productive intercultural exchange. This requires empathy and a willingness to step outside your own frame of reference.",
+      "Morphism": "This statement highlights a shift in the goal of cross-cultural understanding from imposing one's views to a process of making mutual sense and recognizing shared humanity.",
+      "Tags": "interpretive-success, cross-cultural-understanding, shared-space, interpretive-charity, intelligibility, rationality"
+    }
+  },
+  {
+    "card_id": "Wikan_Intent_over_Particulars",
+    "header": "Intent Over Particulars",
+    "perfect_quote": "\"The issue is the need to attend to what people say and the intent they are trying to convey, rather than groping for some 'larger' answers within the particulars of their spoken words.\"",
+    "key_features": [
+      "Focus on Intent: It is more important to attend to the intent behind people's words than to dissect the literal meanings of the words themselves.",
+      "Beyond Literal Meaning: Avoid searching for deep, hidden meanings within specific words or phrases."
+    ],
+    "properties": {
+      "Practical Application": "When trying to understand someone, focus on the intention and message they are attempting to convey rather than over-analyzing specific words. Adopt a holistic approach to communication, understanding that individual words are often just building blocks to a larger message.",
+      "Morphism": "This quote advocates a shift from linguistic precision to an emphasis on the intent behind communication.",
+      "Tags": "speaker-intent, communication-purpose, holistic-interpretation, avoiding-literalism"
+    }
+  },
+  {
+    "card_id": "Wikan_Beyond_Manifest_Sayings",
+    "header": "Beyond Manifest Sayings",
+    "perfect_quote": "\"the term offered itself when I became apprized of my, and others', 'stuckness' in words like karma pala. It seems to point in the requisite direction: to actors' intentions, somehow 'beyond' their manifest sayings\"",
+    "key_features": [
+      "'Stuckness' in Words:  An over-reliance on specific words, like 'karma pala,' can hinder understanding.",
+      "Intent Beyond Words: Understanding requires looking 'beyond' the literal words to the actor's intentions."
+    ],
+    "properties": {
+      "Practical Application": "When encountering complex concepts or situations, don't get stuck on the literal meanings of the words used to describe them. Look for the underlying intentions and motivations behind those words. Focus on what people are trying to achieve and communicate rather than the words themselves. This also suggests that one should not remain stuck on the words but look beyond what they mean to the speaker's intent.",
+      "Morphism": "This quote emphasizes moving past literal interpretations to a more nuanced understanding of communication.",
+      "Tags": "intentions, beyond-words, manifest-sayings, karma-pala, communication-depth"
+    }
+  },
+  {
+    "card_id": "Wikan_Thick_Description_Limits",
+    "header": "Limits of Thick Description",
+    "perfect_quote": "\"Thick description (Geertz 1973b) is not the answer, for it leaves unanswered what it is that is to be thickly described (Rosaldo 1989b:94ff.).\"",
+    "key_features": [
+      "Incompleteness of Thick Description: Thick description, while detailed, doesn't inherently address what should be described in the first place."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that providing a great deal of detail does not solve the fundamental issue of what aspects of a situation are truly important. Strive to refine your focus and the methods of analysis so that the criteria for what is significant is not simply a great deal of detail, but also a meaningful selection of that detail.",
+      "Morphism": "This quote challenges the notion that detailed description, in itself, leads to understanding.",
+      "Tags": "thick-description, limits-of-description, interpretation, ethnographic-methods"
+    }
+  },
+  {
+    "card_id": "Wikan_Refined_Attention_Multiple_Concerns",
+    "header": "Refining Attention to Multiple Concerns",
+    "perfect_quote": "\"Rather, we need to refine our ways of attending, thus better to grasp what people are up to, their multiple, compelling concerns, and what is at stake for them, against a backdrop of the social relations in which they are engaged, and the resistance life offers to them.\"",
+    "key_features": [
+      "Refined Attention: The need to improve how we focus our attention in order to grasp people's actions and motivations.",
+      "Multiple Concerns: Acknowledging that people have many compelling concerns that shape their actions.",
+      "Social Relations: Understanding that actions occur against a backdrop of social relations.",
+      "Resistance of Life: Recognizing that people's actions are also shaped by the resistance of life circumstances."
+    ],
+    "properties": {
+      "Practical Application": "Move beyond simple description and strive to truly understand people's motivations. Prioritize how to best understand the multiple concerns that drive people's actions by placing those actions in their broader social context and also acknowledge the constraints under which those actions occur. This approach allows for richer, more nuanced insights than would be possible by simply describing behavior alone. Attend to the multiple factors that affect the situation of the person you are studying in order to appreciate the complexity of their experience.",
+      "Morphism": "This quote emphasizes the importance of attending to the full range of factors that impact people's actions, not just their surface behavior.",
+      "Tags": "refined-attention, multiple-concerns, social-relations, resistance-of-life, ethnographic-methods"
+    }
+  },
+  {
+    "card_id": "Wikan_Beyond_Discourse_Wider_Concerns",
+    "header": "Beyond Discourse: Wider Life Concerns",
+    "perfect_quote": "\"A Muslim 'reading' karma pala as taqdir does so in part because she has superior interests 'located' far beyond the arena where this discourse takes place: a sick husband, a tormented family, grinding poverty that could be mercifully alleviated if other things went well. There is no way her 'discourse' with the balian can be separated from such wider life concerns, always multiple and compelling by their nature.\"",
+    "key_features": [
+      "Superior Interests: Individuals' interpretations are influenced by their more pressing, personal concerns that are outside the immediate context of a conversation.",
+      "Inseparability of Discourse and Life: Discourse cannot be separated from the wider life concerns and circumstances of the individual."
+    ],
+    "properties": {
+      "Practical Application": "When analyzing discourse, remember that people's interpretations and actions are heavily influenced by their personal situations and needs. Do not treat discourse as if it occurs in a vacuum, and always look to see what pressing concerns exist outside of the immediate exchange. Understanding these concerns will often shed light on the real message behind what is being said and help you discover its relevance.",
+      "Morphism": "This quote highlights the situated nature of discourse, as embedded in individuals' broader life experiences.",
+      "Tags": "discourse, life-concerns, situated-knowledge, multiple-interests, interpretation"
+    }
+  },
+  {
+    "card_id": "Wikan_Relevance_Intention",
+    "header": "Relevance and Intention",
+    "perfect_quote": "\"The approach I advocate is thus in tune with a commonsense view, analytically framed in Sperber and Wilson's theory of relevance (1989 ). It would have us attend to the effect people are trying to make and the relevance of their words in terms of how they are positioned and where they seem to want to go, rather than the message their words might seem to encase.\"",
+    "key_features": [
+      "Focus on Effect and Intention: Emphasizes the importance of focusing on the effect that people are trying to achieve and their intentions rather than solely on the literal message of their words.",
+      "Positioning and Direction: The relevance of words is tied to the speaker's position and where they are trying to go.",
+      "Theory of Relevance: Suggests that this approach aligns with the theory of relevance."
+    ],
+    "properties": {
+      "Practical Application": "Instead of focusing solely on the literal meaning of words, analyze the speaker's intended effect and their position and goals. Interpret utterances as strategic moves with specific aims. Use the theory of relevance to understand how people select what to say and what they are hoping to achieve with their communication. In doing so, you will gain a deeper understanding of their intended message.",
+      "Morphism": "This quote suggests that the meaning of words is less about their literal content and more about their intended effect and the speaker's position.",
+      "Tags": "theory-of-relevance, intention, speaker-position, effect-of-words, pragmatics, interpretation"
+    }
+  },
+  {
+    "card_id": "Wikan_Passing_Theory_Definition",
+    "header": "Evolving Vocabularies and Passing Theories",
+    "perfect_quote": "\"We would need to evolve a vocabulary that would fit the task at hand. To avoid being taken by surprise, we would probably also resort to a set of guesses about what the other person will do under the circumstances. And so would she in response to us. Davidson refers to such guesswork as a 'passing theory' about the noises and inscriptions presently being produced by a fellow human\" (Davidson 1986, cited in Rorty 1989:14).",
+    "key_features": [
+      "Evolving Vocabulary: Communication requires the development of a shared vocabulary.",
+      "Anticipation: People make guesses about others' actions to avoid surprise.",
+      "Reciprocity: Both parties are engaged in this guesswork.",
+      "Passing Theory: Davidson's concept of a 'passing theory' is the set of guesses one makes about another's utterances."
+    ],
+    "properties": {
+      "Practical Application": "When engaging in communication, be prepared to adapt your language and assumptions. Recognize that both you and the other person are making guesses about each other. This ongoing adjustment is key to establishing a shared understanding. Be aware that communication is a dynamic process that requires a willingness to create a shared understanding from the ground up. Understand that a passing theory is what you use to make sense of a specific interaction with another person. It's your best guess about what they mean, based on the current context, and may change as you gather new information.",
+      "Morphism": "This quote introduces the concept of 'passing theories' as a way to understand how individuals navigate communication by making anticipatory guesses.",
+      "Tags": "passing-theory, communication, anticipation, shared-vocabulary, dynamic-process"
+    }
+  },
+  {
+    "card_id": "Wikan_Passing_Theory_Correction",
+    "header": "The Dynamic Nature of Passing Theories",
+    "perfect_quote": "\"a theory is 'passing' in the sense that 'it must constantly be corrected to allow for mumbles, stumbles, malapropisms, metaphors, . . . egregious stupidity, strokes of genius, and the like.'\"",
+    "key_features": [
+      "Dynamic Correction: Passing theories are not static, but require constant correction.",
+      "Adaptability: They need to accommodate various communication imperfections and unexpected elements."
+    ],
+    "properties": {
+      "Practical Application": "Adopt a flexible mindset when communicating, because you will need to be prepared to adjust your understanding in response to errors, unexpected turns, or moments of clarity. You should not rely too heavily on your initial assumptions about what is happening or what someone intends. Instead, recognize that a good understanding requires a constant give and take between what you believe is happening, and the actual, unfolding events. In other words, you must see your theories as something that are constantly passing and being replaced with updated theories as new information comes to light. It also means understanding that communication is a messy process that will often be imprecise.",
+      "Morphism": "This quote emphasizes the fluid and adaptable nature of passing theories.",
+      "Tags": "passing-theory, correction, adaptability, communication-dynamics"
+    }
+  },
+  {
+    "card_id": "Wikan_Convergence_Passing_Theories",
+    "header": "Convergence on Passing Theories",
+    "perfect_quote": "\"If we ever succeed in communicating easily and happily, it will be because her guesses about what I am going to do next, including what noises I am going to make next, and my own expectations about what I shall do or say under certain circumstances, come more or less to coincide, and because the converse is also true.... To say that we come to speak the same language is to say, as Davidson puts it, that 'we tend to converge on passing theories.' Davidson's point is that all 'two people need, if they are to understand one another through speech, is the ability to converge on passing theories from utterance to utterance.' [Rorty 1989:14; emphasis added]\"",
+    "key_features": [
+      "Successful Communication:  Achieved when people's guesses about each other's actions and intentions coincide.",
+      "Reciprocal Expectations:  Mutual understanding requires a convergence of both parties' expectations.",
+      "Speaking the Same Language:  Implies a convergence on passing theories.",
+      "Convergence as Key:  The ability to converge on passing theories is essential for successful communication."
+    ],
+    "properties": {
+      "Practical Application": "Aim to align your expectations and interpretations with those of the people you're interacting with, and remain open to revising your passing theory as the interaction continues. Successful communication is not a given, it's something that is actively constructed by participants who are able to converge on a shared understanding, which means being open to each other and actively participating in the give and take of the conversation. The ability to converge on these passing theories, from moment to moment, is key to achieving mutual understanding.",
+      "Morphism": "This quote connects successful communication to the convergence of individual passing theories.",
+      "Tags": "convergence, passing-theory, successful-communication, mutual-understanding, reciprocal-expectations"
+    }
+  },
+  {
+    "card_id": "Wikan_Passing_Theory_Application",
+    "header": "Passing Theories in Practice",
+    "perfect_quote": "\"a passing theory about what kinds of humans they were so as not to be taken by surprise, and so as to get them to accept, and preferably to like, me. My passing theory was constantly in flux.\"",
+    "key_features": [
+      "Practical Application: A passing theory is developed to navigate social interactions and is adjusted as the situation evolves.",
+      "Goal-Oriented: Passing theories are formed to achieve goals such as acceptance and rapport.",
+      "Dynamic: The theory is not fixed but is continuously updated."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that a passing theory is a practical tool that you can use to navigate interactions, to anticipate what might happen and to help you achieve your desired goals in the interaction. Be mindful that any given passing theory is not a fixed idea, it is something you use to help you navigate a situation, but it should also be subject to continuous revision and updating as the situation itself changes. Do not rely too much on any initial assumptions. Instead be prepared to adapt your theory as you gather more data from the interaction.",
+      "Morphism": "This quote illustrates how passing theories are used actively to manage social interactions.",
+      "Tags": "passing-theory, social-interaction, dynamic-theory, practical-application, communication-strategy"
+    }
+  },
+  {
+    "card_id": "Wikan_Rudimentary_Speech_Five_Senses",
+    "header": "Learning Through Rudimentary Speech and the Senses",
+    "perfect_quote": "\"we had learned a lot by the use of rudimentary speech coupled with the five senses, which allowed us to scan the unfamiliar scene and take in a wealth of information on all manners of parameters within which life in Bhutan unfolds-all the givens and self-evidences within which any Bhutanese speech is cast.\"",
+    "key_features": [
+      "Rudimentary Speech:  Learning is achieved even with limited language skills.",
+      "Five Senses: Observation using all senses is crucial for gathering information.",
+      "Unfamiliar Scenes: The approach is useful for understanding new environments.",
+      "Self-Evidences:  It helps in understanding the implicit, taken-for-granted aspects of a culture."
+    ],
+    "properties": {
+      "Practical Application": "When entering a new situation, don't underestimate the power of simple communication and using your senses to observe the environment. Even with limited language, you can gather important information about how people live and the assumptions they have. This involves paying attention to the details of the world and how people interact within it. It means that learning is not just about language, it is about using all the ways that you perceive the world to make sense of it.",
+      "Morphism": "This quote emphasizes the importance of sensory observation and basic communication over advanced linguistic ability in initial understanding.",
+      "Tags": "rudimentary-speech, five-senses, observation, cultural-understanding, implicit-knowledge"
+    }
+  },
+  {
+    "card_id": "Wikan_Physical_Observation_Context",
+    "header": "Physical Observation and Contextual Understanding",
+    "perfect_quote": "\"How much subtle analysis of words and discourse is not obviated when I have seen the remoteness of farms and walked the distances; noted the gross structures of power, class privilege, opulent monasteries, and poverty; or discovered the absence of any kind of marriage rituals and contracts. Simple signs of insecurity and anxiety in the face of sickness and misfortune, or vis-a-vis men in power, will start to resonate in me. Childhood, love, pregnancy, and old age are colored by such circumstances. And as I slowly begin to get 'the' language, I shall have a reference point, a 'context,' so that when people say, for instance, 'We women, the enemy is our body' (Wikan 1990b), I can better understand something of what they mean.\"",
+    "key_features": [
+      "Physical Observation: Direct experience (seeing the landscape, social structures, etc.) provides critical context.",
+      "Power Dynamics: Observing power structures, class, and poverty provides important information.",
+      "Emotional Resonance: Experiencing physical and emotional aspects of life creates a basis for empathy and understanding.",
+      "Context for Language: Direct experience informs the understanding of language."
+    ],
+    "properties": {
+      "Practical Application": "To truly understand a culture or situation, it's crucial to engage with the physical realities and social structures. This means going beyond just listening to people talk and observing their immediate interactions and actually seeing the places where they live. It means that physical conditions and social dynamics can create an emotional context that will help you interpret what people say, giving you a better understanding of their point of view. Direct experience will help you understand the full context of what people are saying, and help you recognize why they might be making a specific claim.",
+      "Morphism": "This quote links direct physical experience to emotional understanding and effective interpretation of communication.",
+      "Tags": "physical-observation, context, power-dynamics, emotional-resonance, understanding-language, empathy"
+    }
+  },
+  {
+    "card_id": "Wikan_Language_Barriers_Predictability",
+    "header": "Language Barriers and Behavioral Predictability",
+    "perfect_quote": "\"To say that... two communities have trouble getting along because the words they use are so hard to translate into each other is just to say that the linguistic behavior of inhabitants of one community may, like the rest of their behavior, be hard for inhabitants of the other community to predict\"",
+    "key_features": [
+      "Translation Difficulties: Communication problems arise when words are hard to translate between languages.",
+      "Behavioral Prediction: Difficulty in translation is related to the difficulty in predicting the behavior of others.",
+      "Language as Behavior: Linguistic behavior is a part of overall behavior."
+    ],
+    "properties": {
+      "Practical Application": "Recognize that translation issues are not just about words, but also about the ability to understand and predict how others will behave and that language and behavior are intertwined. Translation difficulties are a symptom of a deeper inability to understand a culture. When communicating, be aware that language and culture are connected, and that the way people behave will inform the meaning they are trying to convey.",
+      "Morphism": "This quote connects language barriers to the broader challenges of understanding and predicting behavior across different cultures.",
+      "Tags": "translation-difficulties, behavioral-predictability, language-as-behavior, cultural-understanding"
+    }
+  },
+  {
+    "card_id": "Wikan_Passing_Theories_No_Rules",
+    "header": "No Rules for Passing Theories",
+    "perfect_quote": "\"For there are no rules for arriving at passing theories that work..... There is no more chance of regularizing, or teaching, this process than there is of regularizing or teaching the process of creating new theories to cope with new data-for that is what this process involves.... We should give up the attempt to illuminate how we communicate by appeal to conventions.\"",
+    "key_features": [
+      "No Fixed Rules: There are no set rules or methods for developing successful passing theories.",
+      "Similar to Theory Creation: The process is akin to creating new scientific theories to accommodate new information.",
+      "Rejection of Conventions:  Communication should not be explained by fixed conventions."
+    ],
+    "properties": {
+      "Practical Application": "Developing useful 'passing theories' is not a straightforward, teachable skill, but rather is an ongoing creative process similar to the way a scientist creates a theory. It means that you should be prepared to adapt and adjust to new information, rather than relying on fixed ideas about how others think or will behave. Communication is not about following set patterns, but about an ongoing process of discovery and adaptation.",
+      "Morphism": "This quote equates the formation of passing theories with the dynamic, iterative process of scientific theory creation, emphasizing adaptability and rejection of fixed conventions.",
+      "Tags": "passing-theories, no-rules, theory-creation, adaptability, communication, conventions"
+    }
+  },
+  {
+    "card_id": "Wikan_Practice_vs_Theory",
+    "header": "Divergence Between Theory and Practice",
+    "perfect_quote": "\"What she may have failed to consider was the divergence between thinking out a scenario and living it in practice. Faced with the balian's broad, contagious smile, his expression of earnest concern for her, and his compassion-what became of a fanatic Muslim's determination not to be taken in? Her passing theory, I take it, started to crumble. She must have begun to feel that he truly willed her well, and that his efforts to reach her, using his Hindu ways, yet came with a pledge of relevance to her.16 He who is expert in handling \"surprises\" probably uses communication to its fullest effect and is skilled at fashioning and refashioning passing theories.\"",
+    "key_features": [
+      "Theory vs. Practice: There is a significant difference between theorizing about a situation and experiencing it.",
+      "Impact of Compassion:  Direct expressions of emotion (compassion, concern) can disrupt pre-existing theories.",
+      "Erosion of Theory: The Muslim woman's initial theory was undermined by her lived experience.",
+      "Pledge of Relevance: The balian's actions and communications were perceived as relevant and meaningful to the woman.",
+      "Skillful Communication: Those adept at handling surprises are skilled in adjusting their passing theories."
+    ],
+    "properties": {
+      "Practical Application": "It is important to understand that how you imagine a situation and how it plays out in reality can be very different. Even a very well thought-out theory may crumble in the face of direct human interactions and emotions. You need to be open to revising your understanding when someone's sincerity makes you see things differently. An individual who is skilled at communication is one who can adapt to new information, and re-evaluate their theories, responding to the surprises and unpredictability of real life, to help others feel understood.",
+      "Morphism": "This quote contrasts the theoretical planning with the dynamic, unexpected nature of real-world interactions, showing how strong emotional cues can make someone revise their assumptions.",
+      "Tags": "theory-vs-practice, compassion, emotional-impact, erosion-of-theory, relevance, skillful-communication, passing-theories"
+    }
+  },
+  {
+    "card_id": "Wikan_Silence_and_Passing_Theories",
+    "header": "Silence and the Development of Passing Theories",
+    "perfect_quote": "\"I managed poorly for the first six months. Then, by the force of circumstance (Wikan 1982:299ff.), and not superior insight on my part, I developed a passing theory that actually worked-the first clearly had not. I gave in to the silence, and suddenly I tuned in to a lot that was happening between people. To experience silence not as a void or an absence but as a space full and pregnant with meaning is difficult for a word-mongering academic\"",
+    "key_features": [
+      "Initial Difficulty:  The author initially struggled in the field.",
+      "Circumstantial Theory: A functional 'passing theory' emerged through circumstances, not initial insight.",
+      "Embracing Silence: The author's breakthrough came when they began to appreciate silence.",
+      "Silence as Meaningful: Silence is a space filled with meaning, not an absence of communication.",
+      "Challenges for Academics:  Academics who are used to language often find it difficult to appreciate silence."
+    ],
+    "properties": {
+      "Practical Application": "Sometimes your initial approach or understanding of a situation might be wrong. When you are struggling, you should be open to letting go of your preconceptions and being more receptive to unspoken cues. Silence is not just an absence of speech; it can be full of meaning and provide valuable insights if you are willing to pay attention. This is particularly useful for academics and researchers who tend to focus on words.",
+      "Morphism": "This quote describes a process of adaptation and discovery, where the researcher had to shift from active verbal engagement to receptive observation of non-verbal cues.",
+      "Tags": "passing-theories, silence, adaptation, observation, non-verbal-communication, insight"
+    }
+  },
+  {
+    "card_id": "Wikan_Language_and_Intuition",
+    "header": "Language, Intuition, and Understanding",
+    "perfect_quote": "\"No neophyte anthropologist, then, should despair at having rudimentary language or even \"no\" language at first. There is a time and place for everything, and perhaps even a time when one might bless oneself lucky not to have words to get in the way of one's senses or intuitions\"",
+    "key_features": [
+      "No Despair for Beginners: New anthropologists shouldn't be discouraged by limited language skills.",
+      "Time and Place: There is an appropriate time for different approaches, including limited language.",
+      "Words as Obstacles:  Words can sometimes hinder sensory perception and intuition.",
+      "Intuition is Valuable: Intuition is a way to gain understanding."
+    ],
+    "properties": {
+      "Practical Application": "It's important to not be discouraged by your initial lack of language skills when exploring a new culture. There can be times when having few words might be a benefit, allowing you to pay more attention to your senses and intuition. Intuition is a valid tool for understanding that should not be disregarded.",
+      "Morphism": "This quote challenges the assumption that language is a primary tool for understanding, highlighting how a lack of language may help one access deeper levels of intuition and sensory perception.",
+      "Tags": "language, intuition, sensory-perception, understanding, fieldwork, anthropology"
+    }
+  },
+  {
+    "card_id": "Wikan_Beyond_Words_Cairo",
+    "header": "Understanding Beyond Words in Cairo",
+    "perfect_quote": "\"many at a time-- had the ballast of my knowledge of a rich vocabulary and its uses. And yet I had already grasped many essentials of what life was all about, what was at stake for people, the sources of their pain and humiliation, in the early stages when I tried to see beyond the words-because I could not grasp them. The sources of pain and humiliation for poor people I met in Cairo were the ceaseless struggle for money, for making ends meet; the inability ever to make all one's children happy all at once because there was never enough to go around; the fear that one's sheer material deprivation would be exposed to the world with the Schadenfreude and gossip this would elicit; the con- tinual bickering with husbands who could not be counted on to listen to one's pain.\"",
+    "key_features": [
+      "Early Understanding:  The author grasped the essentials of life in Cairo despite limited language skills.",
+      "Seeing Beyond Words:  The author gained insights by focusing on things beyond just words.",
+      "Sources of Pain: The main sources of pain included poverty, inability to meet family needs, fear of exposure, and marital conflicts."
+    ],
+    "properties": {
+      "Practical Application": "You can understand important things about people's lives even when you cannot speak their language well, by focusing on their actions, the challenges they face, and the emotional impact of those challenges. This approach allows you to discover the roots of people's struggles even if you don't understand the words themselves. It is more important to seek a real understanding of what's at stake for others than to simply focus on the literal meanings of words.",
+      "Morphism": "This quote contrasts initial difficulty with the later ability to interpret complex social issues, highlighting how non-linguistic cues offer a deeper understanding of people's lives.",
+      "Tags": "understanding, non-verbal, observation, poverty, emotional-challenges, fieldwork"
+    }
+  },
+  {
+    "card_id": "Wikan_Ingold_Reindeer_Herdsman",
+    "header": "Learning Through Shared Experience and Attention",
+    "perfect_quote": "Consider Tim Ingold's lucid discussion of how he \"learned (up to a point) to see the world in the way a reindeer herdsman does.\" It was through involvement with others in everyday contexts of practical action ... [and] becoming immersed in joint action ... in a shared environment. I experience the components of this environment as they do, not because I have learned to construct them in my mind according to the same categorical conventions, but because I have learned to attend to them in the same way, according to what they afford in the situational context of herding activities. Such communion of experience, the awareness of living in a common world, establishes a foundational level of sociality that exists-in Bourdieu's (1977:2) phrase-\"on the hither side of words and concepts,\" and that constitutes the relational baseline on which all attempts at verbal communication must subsequently build. [Ingold In press:18-19]18",
+    "key_features": [
+      "Learning by Immersion: Gaining understanding through active involvement in daily routines and shared activities.",
+      "Shared Environment: The importance of a common environment for shaping perception and understanding.",
+      "Attending in the Same Way: Focusing on learning to perceive things as others do, based on their lived experience and the affordances of their environment.",
+      "Beyond Categorical Conventions: Understanding is not just about learning the same categories but experiencing the world in a similar manner.",
+      "Sociality Beyond Words:  A fundamental level of social connection exists before verbal communication, based on shared experience."
+    ],
+    "properties": {
+      "Practical Application": "To truly understand a perspective, you must actively participate in the daily lives and shared experiences of others. It's not enough to simply learn their categories or definitions; it's about experiencing the world in the same way they do and perceiving things through their lens. This shared experience forms the basis for meaningful social connections and subsequent communication.",
+      "Morphism": "This quote provides a specific example of how to apply the previous theory, focusing on immersion and shared attention rather than just linguistic or conceptual understanding.",
+      "Tags": "immersion, shared-experience, attention, perception, lived-experience, sociality, communication,  relational-baseline"
+    }
+  },
+  {
+    "card_id": "Wikan_Transcending_Context",
+    "header": "Transcending Context and Achieving Resonance",
+    "perfect_quote": "how to transcend one's own \"context\" so as to defend against \"false resonances.\"19 As Ingold shows, it is by painstaking engagement on a day-to-day basis in events and routines which are \"theirs\" so that we come to share as much as possible in them. Sharing a world with others means learning to attend to it in the same way. Such a practice dispels any mystique of \"resonance\" as field technique and epistemology. It is a down-to-earth concept, grounded in practical action. We need not have the \"same experience\" to be able to attend in the same way. But we must dip into the wellsprings of ourselves for something to use as a bridge to others. It does not come by an act of will, though will helps. Practical exposure to a world of \"urgency, necessity\" (Bourdieu 1990) is required. But for resonance to work, we need to shed the stifling preconception that can be a stumbling block along the way: that others are essentially different from us, to be understood only by means of their \"culture\"; and that their words bespeak different life worlds.",
+    "key_features": [
+      "Transcending Context:  The need to move beyond one's own perspective to avoid misinterpretations.",
+      "Engagement in Daily Life: Understanding others through active participation in their daily routines and events.",
+      "Shared World, Shared Attention: Learning to perceive and attend to the world in the same way as others.",
+      "Resonance as Practical Action: Resonance is not a mystical concept but a result of practical engagement and shared experience.",
+      "Bridging Through Self: Connecting with others using one's own experiences as a bridge.",
+      "Practical Exposure: The necessity of exposure to the 'urgency and necessity' of others' lives.",
+      "Overcoming Preconceptions: Shedding the idea that others are fundamentally different and defined by their 'culture'."
+    ],
+    "properties": {
+      "Practical Application": "To avoid false resonance, actively engage in the daily lives of others. This means participating in their routines and events to share their experience of the world, and understanding how they attend to it. It's a practical process that requires effort and personal reflection. Use your own experiences as a bridge to connect with them. You don't have to have the same experiences, but you do need to see the world through their lens. This also requires releasing the preconception that they are fundamentally different from you.",
+      "Morphism": "This quote builds upon previous concepts about shared experience and attention, explaining how these ideas can be used to avoid misinterpretations.",
+      "Tags": "transcending-context, false-resonance, engagement, shared-world, shared-attention, resonance, practical-action, self-awareness, overcoming-preconceptions, practical-exposure, empathy"
+    }
+  },
+  {
+    "card_id": "Wikan_Courage_to_Shed_Preconceptions",
+    "header": "The Courage to Shed Preconceptions in Understanding",
+    "perfect_quote": "Courage is required because we may have to shed our preconceptions of what understanding \"is.\"",
+    "key_features": [
+      "Courage: The act of shedding preconceptions requires courage, indicating it is a challenging task.",
+      "Shedding Preconceptions:  The process of releasing established ideas about what it means to understand something.",
+      "Redefining Understanding: This shedding of preconceptions leads to a new, and potentially uncomfortable, definition of what understanding 'is'."
+    ],
+    "properties": {
+      "Practical Application": "Approaching understanding requires courage because you will have to challenge and let go of your preconceptions. Understanding is not a fixed concept; it might require redefining it in the face of new information and insights gained through resonance. This process can be uncomfortable, as it means confronting the limits of your current ways of thinking.",
+      "Morphism": "This quote introduces the need for courage and willingness to redefine what understanding is when trying to approach it, building on the previous idea of needing to shed preconceptions to avoid 'false resonances' [Wikan_Transcending_Context].",
+      "Tags": "courage, shedding-preconceptions, redefining-understanding, open-mindedness, intellectual-humility"
+    }
+  },
+  {
+    "card_id": "Wikan_Multiple_Concerns_and_Silent_Communication",
+    "header": "Attending to Multiple Concerns and Silent Communication",
+    "perfect_quote": "I have elsewhere stressed problems of relevance and the need to attend to people's multiple, compelling concerns and to follow them as they move-if we are to grasp what is at stake and how they construe their own experience (Wikan 1990a). I have argued for the need to cross thresholds along with people, and to bridge domains, if we are to grasp what concerns cannot be shed but impinge and require simultaneous attention. This methodological stance represents my own best effort to get a hold on those trials and tribulations by which people often feel 'trapped,' and to which Balinese bear testimony when they complain, as they often do, 'There's so much to care about!' It comes across as an oft-exasperated sigh about how to manage, to cope, in a life of multiple, simultaneous concerns. By perceiving people's struggle; by coming up against the enigma of clear bright smiles in the face of ordeals like bereavement and other crucial losses; by perceiving the quivers in a voice; by 'reading' somatic complaints about overwhelming pain and suffering, and.... What else was there? Too many things for me to remember now, for such clues do not stand out in the field notes I took, even when, after Oman, I had learnt to pay close attention to silent communication. Partly because when we work as anthropologists we are not truly implicated in the world other people. It does not matter that much if we understand them or not. Our misunderstanding are not likely to resonate with crucial effects. We are concerned to produce effects on the anthropological community, and only secondarily on the people whose language we are trying to grasp.",
+    "key_features": [
+      "Relevance and Multiple Concerns: The importance of focusing on people's pressing, simultaneous concerns to understand their experiences.",
+      "Crossing Thresholds and Bridging Domains:  The necessity of engaging with people across different aspects of their lives to grasp their full experience.",
+      "Experiencing Struggles: The need to perceive the difficulties and complexities people face.",
+      "Deciphering Silent Communication: Attending to nonverbal cues, such as expressions and somatic complaints, to understand deeper emotions.",
+      "Limited Anthropological Implication:  The observation that anthropologists are not always deeply connected to the communities they study, which may limit their understanding.",
+      "Prioritizing Scholarly Effects:  The concern that anthropologists may prioritize the impact of their work on their peers over the understanding of the people they study."
+    ],
+    "properties": {
+      "Practical Application": "To truly understand a community, you must attend to their multiple, pressing concerns and struggles. Go beyond surface-level observations and immerse yourself in the different areas of their lives, paying close attention to their nonverbal cues, even as you also pay attention to their words and concepts. Recognize that your role as an outside researcher may limit your connection to the community, and it may also prioritize your own professional impact over their understanding and needs.",
+      "Morphism": "This quote builds upon previous discussions of shedding preconceptions and achieving resonance, emphasizing the need to attend to the unspoken and to deeply immerse oneself in the lives of others [Wikan_Courage_to_Shed_Preconceptions, Wikan_Transcending_Context]. It shows why those things are so essential to truly understanding.",
+      "Tags": "relevance, multiple-concerns, crossing-thresholds, bridging-domains, silent-communication, anthropological-implication, scholarly-effects, immersion, empathy, nonverbal-communication"
+    }
+  },
+  {
+    "card_id": "Wikan_Anthropology_Language_Technical_Fix",
+    "header": "Anthropology's Technical View of Language and its Consequences",
+    "perfect_quote": "Whereas in our daily lives we use words mainly to get things done and to \"work on\" family and colleagues, the anthropological enterprise construes language as a kind of technical fix- not unlike biomedicine's hegemonic representation of its laboratory tests. We can do so in part because we do not experience the consequences of our own misinterpretations. We have this \"freedom from urgency, from necessity,\" because our anthropological observation point is \"founded upon the neutralization of practical interests and practical stakes\" (Bourdieu 1990:381, 383). Thus we are in a protected situation where we can build up our own little secret, carry it home, and busy ourselves \"with problems that serious people ignore\" (1990:381). Power and pragmatics enter, whether we like it or not. The interpretive quest in which many of us are entangled further works to segregate our lives from our works and to shield us from certain self-defeating aspects of our enterprise: it blinds us to the predicaments of people, and thereby also to our own. An attempt to develop greater resonance would mean implicating ourselves, actively and emotionally, in the other's world-rather than using our strange combination of power and marginality to elicit texts and ask people's help in \"contextualizing\" them-on our terms.",
+    "key_features": [
+      "Language as a Technical Fix: Anthropology often treats language as a tool for technical analysis, similar to how biomedicine uses lab tests, rather than a means of social interaction.",
+      "Freedom from Consequences: Anthropologists do not usually face the real-world impacts of their misinterpretations, which allows them to pursue analysis without immediate practical stakes.",
+      "Protected Research Environment: The academic setting provides a safe environment where anthropologists can engage with theoretical problems without the pressures of real-world concerns.",
+      "Segregation of Lives and Work: The anthropological approach often separates the researcher's life from their work, creating a distance that can lead to a lack of understanding and awareness of their own positionality.",
+      "Implication and Resonance: Developing genuine resonance requires emotional engagement with the other's world, rather than just extracting texts and contextualizing them according to one's own terms.",
+      "Power and Marginality:  Anthropologists wield power and maintain a marginal status, which affects how they interact with the communities they study."
+    ],
+    "properties": {
+      "Practical Application": "This quote is a warning that as anthropologists, we should not fall into the trap of seeing our discipline as a purely technical exercise and that the focus on words and analysis can create a separation from those we are studying, which can obscure our ability to see their reality. Therefore, we need to emotionally engage with the communities we are researching and be aware of how we use our power and privilege.",
+      "Morphism": "This quote follows a discussion on how anthropologists are not always truly implicated in the world of the people they study [Wikan_Multiple_Concerns_and_Silent_Communication]. It also is another way of approaching the ideas discussed in the ideas of the necessity to shed our preconceptions, transcend the words, and go beyond context to reach true resonance with others [Wikan_Courage_to_Shed_Preconceptions, Wikan_Transcending_Context].",
+      "Tags": "technical-fix, language, freedom-from-consequences, protected-environment, segregation, resonance, implication, power, marginality, misinterpretation, ethical-research"
+    }
+  },
+  {
+    "card_id": "Wikan_Resonance_vs_Culture",
+    "header": "Resonance and Culture: Divergent Concepts",
+    "perfect_quote": "\"Resonance\" and \"culture\" seem to point in different directions: the one evokes sameness, the other extols the exotic and strange. As concepts they are not on a par. \"Resonance\" con- notes a faculty, a feeling-thinking engagement. \"Culture\" is an abstraction, a gloss on experi- ence; or an analytical implication (Hastrup and Elsass 1990); or a model of and for life: what we see with, rather than what we see. Resonance evokes shared human experience, what people across place and time can have in common. Where culture separates, resonance bridges-from a lived reali- zation that this is the only practicable way. It does not deny difference: Hinduism, Buddhism, and Islam are, as the balian said, completely different. But it renders difference",
+    "key_features": [
+      "Divergent Directions: Resonance and culture point in different directions; resonance emphasizes sameness, while culture emphasizes the exotic and strange.",
+      "Conceptual Disparity: Resonance is a faculty or feeling-thinking engagement, while culture is an abstraction or a way of seeing.",
+      "Resonance and Shared Experience: Resonance evokes shared human experience and commonality across places and times.",
+      "Bridging Differences: Where culture separates, resonance bridges, acknowledging differences but highlighting shared human potential.",
+      "Culture as a Lens: Culture is described as a way of seeing, not what we see, influencing how we perceive the world."
+    ],
+    "properties": {
+      "Practical Application": "This quote highlights a crucial distinction between the concepts of resonance and culture. It suggests that while culture can emphasize differences and exoticize the 'other,' resonance allows for a deeper understanding based on shared human experiences. This distinction challenges the way anthropologists perceive and interpret other people's lives and advocates for a shift towards a more empathetic and resonant approach.",
+      "Morphism": "This quote directly addresses the implications of the ideas presented in [Wikan_Multiple_Concerns_and_Silent_Communication] where an overly technical approach of anthropology and a focus on words can lead to a separation from those we are studying, while in contrast, it builds on the ideas of [Wikan_Transcending_Context, Wikan_Beyond_Field_Method] to highlight the importance of resonance in understanding the world of another person.",
+      "Tags": "resonance, culture, sameness, difference, exotic, abstraction, shared-experience, bridging-differences, empathy, anthropological-approach, way-of-seeing"
+    }
+  },
+  {
+    "card_id": "Wikan_Shared_Human_Potential",
+    "header": "Shared Human Potential: Transcending Cultural Differences",
+    "perfect_quote": "relatively insig- nificant in the face of that which counts more for certain purposes: shared human potential.",
+    "key_features": [
+      "Relative Insignificance of Difference: Cultural differences are portrayed as less important than the shared human potential that unites people.",
+      "Focus on Shared Potential: The emphasis shifts from cultural differences to the commonalities and capabilities that all humans share."
+    ],
+    "properties": {
+      "Morphism": "This idea directly counters the emphasis on cultural difference presented in [Wikan_Resonance_vs_Culture] and underscores the importance of resonance in understanding others through shared human potential. This builds on the ideas presented in [Wikan_Transcending_Context, Wikan_Beyond_Field_Method], and counters the overemphasis on words as discussed in [Wikan_Multiple_Concerns_and_Silent_Communication].",
+      "Tags": "shared-humanity, human-potential, cultural-differences, commonality, resonance"
+    }
+  },
+  {
+    "card_id": "Wikan_Communication_and_Intent",
+    "header": "Communication as Inference of Intent",
+    "perfect_quote": "Comprehension is defined as a process of identifying the speaker's informative intention. ... In many- perhaps most-cases of human communication, what the communicator intends to make manifest is partly precise and partly vague.... Communication is successful not when hearers recognize the lin- guistic meaning of the utterance, but when they infer the speaker's \"meaning\" from it.... A speaker who intends an utterance to be interpreted in a certain way, must also expect the hearer to supply a context which allows that interpretation to be reco",
+    "key_features": [
+      "Comprehension as Intent Identification: Understanding involves identifying the speaker's informative intention.",
+      "Intention May Be Vague: What a speaker intends to communicate can be both precise and unclear.",
+      "Success Beyond Linguistic Meaning: Successful communication relies on the hearer inferring the speaker's intended meaning, rather than just the linguistic meaning of the words.",
+      "Context is Required: The speaker expects the hearer to use context to understand their intended meaning."
+    ],
+    "properties": {
+      "Morphism": "This quote reinforces the idea presented in [Wikan_Multiple_Concerns_and_Silent_Communication] that focusing on the words themselves is not sufficient. It builds on the idea that language is a tool to create effects as described in [Wikan_Resonance_vs_Culture] and that understanding of language requires that the listener or reader take on a charitable perspective to try to understand their intention, as discussed in [Wikan_Transcending_Context].",
+      "Tags": "communication, intent, inference, meaning, linguistic, context, understanding, speaker, hearer"
+    }
+  },
+  {
+    "card_id": "Wikan_Context_and_Involvement",
+    "header": "Context, Texts, and the Need for Involvement",
+    "perfect_quote": "we do agree that context is inherently tricky and that texts are no substitute for nitty-gritty involvement in people's daily",
+    "key_features": [
+      "Context is Tricky: Context is recognized as complex and not always straightforward.",
+      "Texts are Insufficient: Texts alone cannot provide understanding; they must be supplemented by real-world involvement."
+    ],
+    "properties": {
+      "Morphism": "This quote underscores the importance of actively engaging with the world of others, building on the practical implications of  [Wikan_Transcending_Context], and highlighting the need to look beyond texts and concepts as discussed in [Wikan_Multiple_Concerns_and_Silent_Communication], and by not focusing on only 'difference' as discussed in [Wikan_Resonance_vs_Culture], to better see a shared human potential as discussed in [Wikan_Shared_Human_Potential].",
+      "Tags": "context, texts, involvement, real-world, understanding, active-engagement"
+    }
+  },
+  {
+    "card_id": "Wikan_Field_Notes_and_Intent",
+    "header": "Limitations of Field Notes and the Importance of Intent",
+    "perfect_quote": "notebook prob- lematic in social encounters in the field, and best to be avoided except for certain clearly defined purposes. Reliance on such devices seems to me to reinforce, and to be itself an expression of, our overreliance on words and the exact utterance. One reader has asked: what then of memory distortion? My answer would be: what if one were to let the tape recorder speak its single text with a full voice, uncorrected and un- modified by all the other cues? Would that enhance one's chance of understanding the speaker's inten- tions? Or might it rather provide what Sperber and Wilson (1989:23) call \"misleading ev",
+    "key_features": [
+      "Problematic Use of Notebooks: Notebooks and similar devices are seen as problematic in social encounters because they can reinforce an over-reliance on words.",
+      "Overemphasis on Exact Utterances: Reliance on these tools can prioritize the exact words over the speaker's intentions and other contextual cues.",
+      "Tape Recorders and Limited Context: Using a tape recorder might not enhance understanding because it only captures one aspect of a complex interaction, possibly providing 'misleading evidence'."
+    ],
+    "properties": {
+      "Morphism": "This quote builds on the limitations of focusing only on words discussed in [Wikan_Communication_and_Intent] and that texts alone are insufficient as discussed in [Wikan_Context_and_Involvement] as well as our earlier discussion about needing to look beyond surface level differences to understand others. It underscores the point made in [Wikan_Beyond_Field_Method] that anthropology's preoccupation with text may be counterproductive in understanding people's lives and is further expanded upon in [Wikan_Multiple_Concerns_and_Silent_Communication] in that it suggests that silent communication is an important consideration in trying to understand others.",
+      "Tags": "fieldwork, notebooks, tape-recorders, words, intention, context, communication, understanding, over-reliance, text, silent-communication"
+    }
+  },
+  {
+    "card_id": "Wikan_Tacit_Guarantee_of_Relevance",
+    "header": "Tacit Guarantee of Relevance in Communication",
+    "perfect_quote": "Sperber and Wilson speak of \"a tacit guarantee of relevance.... Ostensive behaviour provides evi- dence of one's thoughts. It succeeds in doing so because it implies a guarantee of relevance\" (1989:49-50)",
+    "key_features": [
+      "Tacit Guarantee of Relevance: Communication includes a tacit guarantee that the information being shared is relevant.",
+      "Ostensive Behavior: Ostensive behaviors, such as expressions and body language, provide evidence of a person's thoughts.",
+      "Relevance as Key: Successful communication relies on the presumption that the speaker's actions and words are relevant to the context and the listener's needs."
+    ],
+    "properties": {
+      "Morphism": "This quote provides additional context to the idea of shared intention that is discussed in [Wikan_Communication_and_Intent] and the limitations of focusing on words alone discussed in [Wikan_Field_Notes_and_Intent]. This quote relates to previous discussions of 'passing theories' in [Wikan_Transcending_Context] and it reinforces the idea that people look for relevance when interpreting actions. It builds on ideas of active engagement in [Wikan_Context_and_Involvement] by suggesting that ostensive behaviours are important for understanding intentions. It relates to the discussion of how shared potential is a starting point for understanding in [Wikan_Shared_Human_Potential], while also presenting a contrast to the limitations of focusing only on cultural differences as discussed in [Wikan_Resonance_vs_Culture].",
+      "Tags": "relevance, communication, ostensive-behavior, intention, tacit-guarantee, thoughts, context, understanding, social-interaction"
+    }
+  },
+  {
+    "card_id": "Wikan_Countering_Misresonance",
+    "header": "Techniques for Countering Misresonance",
+    "perfect_quote": "Adding to Ingold's remarks, I can point to two \"techn that serve to counter such misresonance. First is an active, unstructured, patient engagement with pe even when nothing seems to be going on and one is just \"wasting\" one's time. Such being-together-w is crucial to grasping what is at stake for people. Maslow characterizes such an attitude as \"recep passive, patient, and waiting, rather than eager, quick, and impatient\" (1966:10). Second is an attemp to overdo one's act as participant but to expose one's genuine reactions in a way that will, one hopes hurt or offend people. What more effective way of correcting one's misresonances might there be letting them be exposed in one's unpretentious interactions with others, giving people the opportunit point out that you are totally wrong? I would also emphasize the importance of b",
+    "key_features": [
+      "Active and Patient Engagement:  Countering misresonance involves active, unstructured, and patient engagement with people, even when it seems like nothing is happening. This approach is crucial for grasping what is truly at stake for them, aligning with Maslow's idea of 'receptive, passive, patient, and waiting'.",
+      "Authentic Self-Exposure:  Another technique is to avoid overacting as a participant and instead expose genuine reactions. This allows for the possibility of correction when misinterpretations occur. By being unpretentious, others have the opportunity to point out when you are wrong.",
+      "Bridging Domains: The importance of bridging domains is also emphasized."
+    ],
+    "properties": {
+      "Morphism": "This quote further reinforces the idea of active engagement that has been discussed in [Wikan_Tacit_Guarantee_of_Relevance] and the need to go beyond words and surface level observations which was discussed in [Wikan_Field_Notes_and_Intent] and our earlier discussion. It builds on the ideas discussed in [Wikan_Multiple_Concerns_and_Silent_Communication] by providing practices that help us to go beyond simply observing and to engage actively in understanding, and also relates to [Wikan_Shared_Human_Potential] by providing a process that helps to reveal human similarities. It also expands on the idea of the importance of learning through error and adaptability that is discussed in [Body_and_Error_in_Practice].",
+      "Tags": "misresonance, engagement, active-listening, patient-observation, authenticity, self-exposure, feedback, correction, bridging-domains, shared-experience, understanding"
+    }
+  },
+  {
+    "card_id": "Wikan_Agent_Thoughts_and_Feelings",
+    "header": "The Active Role of Agent's Thoughts and Feelings",
+    "perfect_quote": "\"The agent's thoughts or feelings are seen as an active part of knowledge, speculation, and speech\"",
+    "key_features": [
+      "Thoughts and Feelings as Active Components: An agent's thoughts and feelings are not passive, but rather are active components in shaping their knowledge, speculation, and speech."
+    ],
+    "properties": {
+      "Morphism": "This quote supports the idea that intentions are crucial for understanding the meaning of speech that was discussed in [Wikan_Field_Notes_and_Intent] and that feelings are intertwined with thoughts, that was discussed in [Wikan_Resonance_and_Appreciation]. This quote is related to the idea that humans are meaning-making creatures and that this ability and drive is a basis for understanding others in [Wikan_Shared_Human_Potential]. It contrasts with ideas of rigid objectivity that are criticized in [Planned_Perfection] and also challenges the idea that thought alone is sufficient for understanding as discussed in [Wikan_Resonance_and_Appreciation] and reinforced in [Wikan_Countering_Misresonance]. This also is related to the idea that  understanding involves not just listening but participating that is discussed in [Wikan_Countering_Misresonance].",
+      "Tags": "thoughts, feelings, knowledge, speculation, speech, active-role, meaning-making, intention, participation"
+    }
+  }
+]

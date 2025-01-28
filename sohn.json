@@ -1,0 +1,331 @@
+[
+    {
+        "card_id": "Reflection_in_Action_Definition",
+        "header": "Reflection-in-Action",
+        "perfect_quote": "Surprise leads to reflection within an action-present. Reflection is at least in some measure conscious, although it need not occur in the medium of words. We consider both the unexpected event and the knowing-in-action that led up to it, asking ourselves, as it were, \"What is this?\" and, at the same time, \"How have I been thinking about it?\" Reflection-in-action has a critical function, questioning the assumptional structure of knowing-in-action.",
+        "key_features": [
+            "Trigger by Surprise: Unexpected events prompt immediate reflection during the ongoing action.",
+            "Conscious Process: Reflection-in-action is partially conscious without requiring verbalization.",
+            "Critical Function: Involves questioning and restructuring underlying assumptions and strategies.",
+            "On-the-Spot Experimentation: Leads to creating and testing new actions to address unexpected phenomena.",
+            "Immediate Significance: Directly impacts the current action."
+        ],
+        "properties": {
+            "Morphism": "Reflection-in-Action is a conscious process triggered by surprise during ongoing activities, leading to immediate adjustments and experimentation to improve actions.",
+            "Tags": "reflection-in-action, surprise, conscious reflection, critical inquiry, on-the-spot experimentation, knowing-in-action"
+        }
+    },
+    {
+        "card_id": "Knowing_in_Action",
+        "header": "Knowing-in-Action",
+        "perfect_quote": "These reveal knowing-in-action that may be described in terms of strategies, understandings of phenomena, and ways of framing a task or problem appropriate to the situation. The knowing-in-action is tacit, spontaneously delivered without conscious deliberation; and it works, yielding intended outcomes so long as the situation falls within the boundaries of what we have learned to treat as normal.",
+        "key_features": [
+            "Tacit Knowledge: Relies on implicit understanding and skills without conscious thought.",
+            "Spontaneous Action: Executed without deliberate planning or reflection.",
+            "Strategic Framing: Involves strategies and ways of framing tasks or problems suitable to the situation.",
+            "Effectiveness Within Boundaries: Functions effectively within learned and familiar contexts."
+        ],
+        "properties": {
+            "Morphism": "Knowing-in-Action refers to tacit and spontaneous execution of strategies that effectively address familiar situations without conscious deliberation.",
+            "Tags": "knowing-in-action, tacit knowledge, spontaneous action, strategic framing, effective within boundaries"
+        }
+    },
+    {
+        "card_id": "Surprise_as_Trigger",
+        "header": "Surprise as a Trigger for Reflection",
+        "perfect_quote": "Routine responses produce a surprise—an unexpected outcome, pleasant or unpleasant, that does not fit the categories of our knowing-in-action. Inherent in a surprise is the fact that it gets our attention. Surprise leads to reflection within an action-present.",
+        "key_features": [
+            "Unexpected Outcomes: Surprises arise when outcomes deviate from expected results based on existing knowledge.",
+            "Attention-Grabbing: The unexpected nature of surprises captures our focus, prompting further thought.",
+            "Catalyst for Reflection: Acts as a catalyst that initiates the process of reflection-in-action."
+        ],
+        "properties": {
+            "Morphism": "Surprise acts as a catalyst for initiating Reflection-in-Action by presenting unexpected outcomes that capture attention and challenge existing knowledge frameworks.",
+            "Tags": "surprise, unexpected outcome, catalyst, reflection-in-action, attention-grabbing"
+        }
+    },
+    {
+        "card_id": "Reflection_Functions",
+        "header": "Functions of Reflection-in-Action",
+        "perfect_quote": "We think critically about the thinking that got us into this fix or this opportunity; and we may, in the process, restructure strategies of action, understandings of phenomena, or ways of framing problems. Reflection gives rise to on-the-spot experiment. We think up and try out new actions intended to explore the newly observed phenomena, test our tentative understandings of them, or affirm the moves we have invented to change things for the better.",
+        "key_features": [
+            "Critical Thinking: Evaluates the thought processes that led to the current situation.",
+            "Restructuring Strategies: Adjusts strategies, understandings, and problem-framing based on new insights.",
+            "On-the-Spot Experimentation: Develops and tests new actions to address unexpected phenomena.",
+            "Adaptive Changes: Aims to improve actions and understandings in real-time."
+        ],
+        "properties": {
+            "Morphism": "Reflection-in-Action facilitates critical thinking, restructuring strategies, and adaptive changes through immediate experimentation and adjustment of actions.",
+            "Tags": "reflection-in-action, critical thinking, restructuring strategies, on-the-spot experimentation, adaptive changes"
+        }
+    },
+    {
+        "card_id": "Reflection_vs_Other_Reflections",
+        "header": "Reflection-in-Action vs. Other Reflections",
+        "perfect_quote": "But regardless of the distinctness of its moments or the constancy of their sequence, what distinguishes reflection-in-action from other kinds of reflection is its immediate significance for action.",
+        "key_features": [
+            "Immediate Impact: Directly influences ongoing actions rather than being retrospective.",
+            "Embedded in Action: Occurs within the context of performing an activity, unlike reflective practices done separately.",
+            "Practical Orientation: Focused on solving current problems and adapting actions in real-time."
+        ],
+        "properties": {
+            "Morphism": "Reflection-in-Action is distinguished from other forms of reflection by its immediate and practical impact on ongoing actions, integrating reflection seamlessly into the activity.",
+            "Tags": "reflection-in-action, comparison, immediate impact, embedded reflection, practical orientation"
+        }
+    },
+    {
+        "card_id": "Community_of_Practitioners",
+        "header": "Community of Practitioners",
+        "perfect_quote": "In return for access to his special knowledge, the professional is accorded a special mandate for social control in matters of his expertise, a license to determine who shall enter his profession, and a relatively high degree of autonomy in the regulation of his practice. We find the idea of a community of practitioners whose special knowledge sets them off from other individuals in relation to whom they hold special rights and privileges.",
+        "key_features": [
+            "Special Knowledge: Members possess expertise that distinguishes them from non-practitioners.",
+            "Social Mandate: Granted authority and responsibility in their area of expertise.",
+            "Autonomy: Enjoy a high degree of self-regulation within their practice.",
+            "Exclusive Rights: Control over entry into the profession and uphold professional standards."
+        ],
+        "properties": {
+            "Morphism": "A Community of Practitioners consists of professionals with specialized knowledge, exclusive rights, and autonomy, enabling them to regulate and uphold standards within their field.",
+            "Tags": "community of practitioners, special knowledge, social mandate, autonomy, professional standards"
+        }
+    },
+    {
+        "card_id": "Technical_Rationality",
+        "header": "Technical Rationality",
+        "perfect_quote": "From the perspective of technical rationality, a competent practitioner is always concerned with instrumental problems. She searches for the means best suited to the achievement of fixed, unambiguous ends—in medicine, health; in law, success at litigation; in business, profit—and her effectiveness is measured by her success in finding, in each instance, the actions that produce the intended effects consistent with her objectives.",
+        "key_features": [
+            "Instrumental Focus: Emphasis on finding means to achieve specific ends.",
+            "Fixed Objectives: Goals are clear, unambiguous, and predefined.",
+            "Effectiveness Measurement: Success is gauged by the ability to attain intended outcomes.",
+            "Field-Specific Ends: Objectives vary across professions (e.g., health, litigation, profit)."
+        ],
+        "properties": {
+            "Morphism": "Technical Rationality involves focusing on instrumental problems with fixed objectives, measuring effectiveness by achieving intended, field-specific outcomes.",
+            "Tags": "technical rationality, instrumental problems, fixed objectives, effectiveness, professional goals"
+        }
+    },
+    {
+        "card_id": "Worldmaking",
+        "header": "Worldmaking",
+        "perfect_quote": "Communities of practitioners are continually engaged in what Nelson Goodman (1978) calls 'worldmaking.' Through countless acts of attention and inattention, naming, sensemaking, boundary setting, and control, they make and maintain the worlds matched to their professional knowledge and know-how.",
+        "key_features": [
+            "Constructing Realities: Actively create and shape their professional environments.",
+            "Sensemaking: Interpret and assign meaning to experiences and information.",
+            "Boundary Setting: Define the limits and scope of their practice.",
+            "Continuous Engagement: Ongoing process of maintaining and evolving their professional world."
+        ],
+        "properties": {
+            "Morphism": "Worldmaking refers to the continuous process by which communities of practitioners construct and maintain professional realities through activities like sensemaking, boundary setting, and control.",
+            "Tags": "worldmaking, sensemaking, boundary setting, professional environments, continuous engagement"
+        }
+    },
+    {
+        "card_id": "Learning_Practices",
+        "header": "Learning Practices: Apprenticeship vs. Self-Learning",
+        "perfect_quote": "Picking up a practice on one's own has the advantage of freedom—freedom to experiment without the constraints of received views. But it also has the disadvantage of requiring each student to reinvent the wheel, gaining little or nothing from the accumulated experience of others. Apprenticeship offers direct exposure to real conditions of practice and patterns of work.",
+        "key_features": [
+            "Self-Learning Advantages: Freedom to experiment and explore without external constraints.",
+            "Self-Learning Disadvantages: Necessitates individual discovery and lacks the benefit of collective experience.",
+            "Apprenticeship Benefits: Provides direct, practical exposure to real-world practices and established patterns.",
+            "Structured Learning: Apprenticeship offers guidance and reduces the need to independently navigate challenges."
+        ],
+        "properties": {
+            "Morphism": "Learning Practices compare Apprenticeship and Self-Learning, highlighting structured, experiential benefits of apprenticeship against the freedom and potential redundancy of self-learning.",
+            "Tags": "learning practices, apprenticeship, self-learning, experiential learning, structured guidance"
+        }
+    },
+    {
+        "card_id": "Practicum_Types",
+        "header": "Types of Practicums",
+        "perfect_quote": "A practicum is a setting designed for the task of learning a practice. In a context that approximates a practice world, students learn by doing, although their doing usually falls short of real-world work. The practicum is a virtual world, relatively free of the pressures, distractions, and risks of the real one, to which, nevertheless, it refers.",
+        "key_features": [
+            "Learning by Doing: Provides a hands-on environment for students to practice skills.",
+            "Simulated Environment: Mimics real-world settings while minimizing actual risks and pressures.",
+            "Bridging Theory and Practice: Connects theoretical knowledge with practical application.",
+            "Controlled Setting: Allows for experimentation and learning without the high stakes of real-world scenarios."
+        ],
+        "properties": {
+            "Morphism": "Practicums are structured environments that simulate real-world practice, enabling students to apply theoretical knowledge in a controlled, low-risk setting for experiential learning.",
+            "Tags": "practicum, experiential learning, simulated environment, hands-on practice, controlled setting"
+        }
+    },
+    {
+        "card_id": "Proactive_Creation",
+        "header": "Proactive Creation",
+        "perfect_quote": "The idea of 'proactive creation', as our reflection shapes our next actions. This cycle of action, surprise, and reflection shows that learning is a continuous process, similar to the idea of 'continuous evolution'.",
+        "key_features": [
+            "Active Shaping: Reflection actively influences subsequent actions.",
+            "Continuous Learning: Emphasizes ongoing adaptation and development.",
+            "Cycle Integration: Incorporates action, surprise, and reflection into a seamless learning process.",
+            "Adaptive Evolution: Aligns with the concept of continuous evolution in learning and practice."
+        ],
+        "properties": {
+            "Morphism": "Proactive Creation involves reflection informing and shaping future actions, fostering a continuous and adaptive learning cycle akin to continuous evolution.",
+            "Tags": "proactive creation, continuous learning, adaptive evolution, reflection, action cycle"
+        }
+    },
+    {
+        "card_id": "Sohn_Tacit_Knowledge",
+        "header": "Tacit Knowledge: Knowing More Than We Can Say",
+        "perfect_quote": "Raymond M. Hainer spoke of 'knowing more than we can say,' and Michael Polanyi, in The Tacit Dimension (1967), coined the term tacit knowledge.",
+        "key_features": [
+            "Knowing More Than We Can Say: Highlights the idea that we possess knowledge that cannot be fully articulated verbally.",
+            "Tacit Knowledge Defined: Michael Polanyi coined the term 'tacit knowledge' to describe this type of understanding."
+        ],
+        "properties": {
+            "Morphism": "Tacit Knowledge refers to understanding that is not fully expressible in words, forming the basis of Knowing-in-Action and contrasting with explicit, scientific knowledge.",
+            "Tags": "tacit knowledge, knowing more than we can say, implicit knowledge, non-explicit knowledge"
+        }
+    },
+    {
+        "card_id": "Sohn_Tool_Use_and_Tacit_Appreciation",
+        "header": "Skillful Tool Use and Direct Appreciation",
+        "perfect_quote": "To become skillful in the use of a tool is to learn to appreciate, directly and without intermediate reasoning, the qualities of the materials that we apprehend through the tacit sensations of the tool in our hand.",
+        "key_features": [
+            "Skillful Tool Use: Involves direct, non-reasoned appreciation of material qualities.",
+            "Tacit Sensations: Appreciation comes from tacit sensations felt through the tool, not conscious thought."
+        ],
+        "properties": {
+            "Morphism": "Skillful tool use exemplifies tacit knowledge through direct appreciation of materials, emphasizing understanding beyond conscious reasoning.",
+            "Tags": "tool use, skill, appreciation, tacit sensations, direct perception, non-reasoned understanding, implicit knowledge"
+        }
+    },
+    {
+        "card_id": "Sohn_Skilled_Performance_and_Normative_Judgments",
+        "header": "Recognition, Norms, and Learning Through Feeling",
+        "perfect_quote": "In the very act by which we recognize something, we also perceive it as 'right' or 'wrong.' ... we can recognize and describe deviations from a norm very much more clearly than we can describe the norm itself. A tennis teacher of my acquaintance writes, for example, that he always begins by trying to help his students get the feeling of 'hitting the ball right.' Once they recognize this feeling, like it, and learn to distinguish it from the various feelings associated with 'hitting the ball wrong,' they begin to be able to detect and correct their own errors.",
+        "key_features": [
+            "Normative Judgments in Recognition: Making immediate judgments of 'right' or 'wrong' upon recognition.",
+            "Describing Deviations, Not Norms: Easier to describe deviations from a norm than the norm itself.",
+            "Learning Through Feeling: Skill acquisition starts with developing a feeling for correct actions, guiding error correction."
+        ],
+        "properties": {
+            "Morphism": "Skilled Performance involves making normative judgments and learning through feelings, facilitating error detection and correction based on tacit understanding.",
+            "Tags": "normative judgments, recognition, deviation, norms, learning, skill acquisition, feeling, error correction, tacit understanding"
+        }
+    },
+    {
+        "card_id": "Sohn_Non_Logical_Processes",
+        "header": "Non-Logical Processes: Spontaneous Skillful Action",
+        "perfect_quote": "Chester Barnard wrote, in the appendix to The Functions of the Executive (1938/1968), about our 'non-logical processes,' by which he meant the skillful judgments, decisions, and actions we undertake spontaneously, without being able to state the rules or procedures we follow.",
+        "key_features": [
+            "Spontaneous Skillful Action: Characterized by skillful judgments, decisions, and actions performed spontaneously.",
+            "Implicit Rules: Actions are undertaken without conscious awareness of the rules or procedures being followed."
+        ],
+        "properties": {
+            "Morphism": "Non-Logical Processes align with Knowing-in-Action and tacit knowledge, emphasizing spontaneous and skillful actions performed without explicit rules.",
+            "Tags": "non-logical processes, spontaneous action, skillful judgment, implicit rules, tacit understanding, automaticity"
+        }
+    },
+    {
+        "card_id": "Sohn_Bicycle_Riding_and_Incongruence",
+        "header": "The Incongruence Between Know-How and Description",
+        "perfect_quote": "When people who know how to ride a bicycle are asked, for example, how to keep from falling when the bicycle begins to tilt to their left, some of them say that they regain their balance by turning the wheel to their right. If they actually did so, they would be likely to fall; fortunately, however, the know-how implicit in their actions is incongruent with their description of it.",
+        "key_features": [
+            "Mismatched Description and Action: Incorrect verbal descriptions of skillful actions.",
+            "Implicit Know-How: Actual know-how is implicit and not accurately represented verbally."
+        ],
+        "properties": {
+            "Morphism": "Illustrates the discrepancy between implicit know-how and verbal descriptions, reinforcing tacit knowledge and Knowing-in-Action concepts.",
+            "Tags": "bicycle riding, incongruence, know-how, implicit knowledge, tacit understanding, action vs description"
+        }
+    },
+    {
+        "card_id": "Sohn_Knowing_in_Action_Defined",
+        "header": "Knowing-in-Action: Skillful Performance",
+        "perfect_quote": "I shall use knowing-in-action to refer to the sorts of know-how we reveal in our intelligent action-publicly observable, physical performances like riding a bicycle and private operations like instant analysis of a balance sheet. In both cases, the knowing is in the action. We reveal it by our spontaneous, skillful execution of the performance; and we are characteristically unable to make it verbally explicit.",
+        "key_features": [
+            "Definition of Knowing-in-Action: Know-how demonstrated through skillful actions, both physical and mental.",
+            "Knowing in the Action: Embedded within the action, not separate from it.",
+            "Inability to Verbalize: Often unable to explicitly describe the know-how demonstrated through actions."
+        ],
+        "properties": {
+            "Morphism": "Defines Knowing-in-Action as skillful performance embedded within actions, emphasizing its tacit and non-verbalizable nature.",
+            "Tags": "knowing-in-action, skillful performance, implicit knowledge, tacit know-how, spontaneous action"
+        }
+    },
+    {
+        "card_id": "Sohn_Describing_Knowing_in_Action",
+        "header": "Describing Tacit Knowledge",
+        "perfect_quote": "We may refer, for example, to the sequences of operations and procedures we execute; the clues we observe and the rules we follow; or the values, strategies, and assumptions that make up our 'theories' of action.",
+        "key_features": [
+            "Methods of Description: Describe tacit knowing using sequences of operations, observed clues and rules, and underlying values, strategies, and assumptions."
+        ],
+        "properties": {
+            "Morphism": "Outlines ways to describe Knowing-in-Action through reflection on different aspects of action, despite its tacit nature.",
+            "Tags": "describing tacit knowledge, sequences of operations, clues, rules, values, strategies, theories of action"
+        }
+    },
+    {
+        "card_id": "Sohn_Dynamic_Knowing_and_Static_Knowledge",
+        "header": "Dynamic Knowing vs. Static Knowledge",
+        "perfect_quote": "For knowing-in-action is dynamic, and 'facts,' 'procedures,' 'rules,' and 'theories' are static.",
+        "key_features": [
+            "Dynamic Nature of Knowing-in-Action: Constantly changing and adapting.",
+            "Static Nature of Explicit Knowledge: Facts, procedures, rules, and theories are static and do not capture the dynamic quality."
+        ],
+        "properties": {
+            "Morphism": "Highlights the difference between dynamic Knowing-in-Action and static explicit knowledge, emphasizing ongoing and adaptive processes.",
+            "Tags": "dynamic knowing, static knowledge, adaptation, flexibility, process vs product, knowing-in-action"
+        }
+    },
+    {
+        "card_id": "Sohn_Catching_a_Ball_and_On-Line_Adjustments",
+        "header": "Continuous Activity and On-Line Adjustment",
+        "perfect_quote": "When we know how to catch a ball, for example, we anticipate the ball's coming by the way we extend and cup our hands and by the on-line adjustments we make as the ball approaches. Catching a ball is a continuous activity in which awareness, appreciation, and adjustment play their parts. Similarly, sawing along a penciled line requires a more or less continuous process of detecting and correcting deviations from the line. Indeed, it is this on-line anticipation and adjustment, this continuous detection and correction of error, that leads us, in the first place, to call activity 'intelligent.'",
+        "key_features": [
+            "Anticipation and Adjustment: Involves anticipating and making on-line adjustments to changing circumstances.",
+            "Continuous Activity: Actions like catching a ball or sawing are ongoing processes requiring active engagement.",
+            "Intelligence in On-Line Correction: Continuously detecting and correcting errors is key to intelligent activity."
+        ],
+        "properties": {
+            "Morphism": "Illustrates the dynamic nature of Knowing-in-Action through examples of continuous anticipation and adjustment, highlighting intelligent activity.",
+            "Tags": "dynamic process, anticipation, on-line adjustments, continuous activity, error correction, intelligent action, knowing-in-action"
+        }
+    },
+    {
+        "card_id": "Sohn_Knowing_in_Action_and_Surprise",
+        "header": "Knowing-in-Action and the Trigger of Surprise",
+        "perfect_quote": "Our spontaneous knowing-in-action usually gets us through the day. On occasion, however, it doesn't. A familiar routine produces an unexpected result; an error stubbornly resists correction; or, although the usual actions produce the usual outcomes, we find something odd about them because, for some reason, we have begun to look at them in a new way. All such experiences, pleasant and unpleasant, contain an element of surprise. Something fails to meet our expectations. In an attempt to preserve the constancy of our usual patterns of knowing-in-action, we may respond to surprise by brushing it aside, selectively inattending to the signals that produce it. Or we may respond to it by reflection, and we may do so in one of two ways. We may reflect on action, thinking back on what we have done in order to discover how our knowing-in-action may have contributed to an unexpected outcome. We may do so after the fact, in tranquility, or we may pause in the midst of action to make what Hannah Arendt (1971) calls a \"stop-and-think.\" Alternatively, we may reflect in the midst of action without interrupting it. In an action-present—a period of time, variable with the context, during which we can still make a difference to the situation at hand—our thinking serves to reshape what we are doing while we are doing it. I shall say, in cases like this, that we reflect-in-action. We might call such a process \"trial and error.\" But the trials are not randomly related to one another; reflection on each trial and its results sets the stage for the next trial. Such a pattern of inquiry is better described as a sequence of \"moments\" in a process of reflection-in-action: • There is, to begin with, a situation of action to which we bring spontaneous, routinized response",
+        "key_features": [
+            "Everyday Competence: Knowing-in-action reliably navigates daily life.",
+            "Triggers for Reflection: Disruptions like unexpected results or persistent errors trigger reflection.",
+            "Experiences of Surprise: Surprises, whether pleasant or unpleasant, prompt a sense of unexpectedness."
+        ],
+        "properties": {
+            "Morphism": "Explains how Knowing-in-Action is typically smooth but can be disrupted by surprises, prompting either dismissal or reflection to adapt and learn.",
+            "Tags": "knowing-in-action, routine, surprise, unexpected result, error, reflection, new perspective, disruption, tacit knowledge, spontaneous action"
+        }
+    },
+    {
+        "card_id": "Sohn_Reflection_in_Action_Process",
+        "header": "Reflection-in-Action as a Sequence of Moments",
+        "perfect_quote": "We might call such a process \"trial and error.\" But the trials are not randomly related to one another; reflection on each trial and its results sets the stage for the next trial. Such a pattern of inquiry is better described as a sequence of \"moments\" in a process of reflection-in-action: • There is, to begin with, a situation of action to which we bring spontaneous, routinized response",
+        "key_features": [
+            "Challenges 'Trial and Error': Emphasizes that trials are not random.",
+            "Interconnected Trials: Reflection on each trial influences subsequent actions.",
+            "Sequence of Moments: Describes reflection-in-action as a structured sequence.",
+            "Initial Situation: Begins with a situation of action and spontaneous, routinized responses."
+        ],
+        "properties": {
+            "Morphism": "Describes Reflection-in-Action as a structured sequence of interconnected moments, where each reflection informs the next action, rather than random trial and error.",
+            "Tags": "trial and error, reflection-in-action, sequence of moments, interconnected trials, spontaneous response, routinized response, emergent creativity, knowing-in-action, adaptive learning, process orientation, creative boundaries, implementation"
+        }
+    },
+    {
+        "card_id": "Sohn_Reflection_in_Action_Cycle",
+        "header": "The Cycle of Knowing-in-Action, Surprise, and Reflection-in-Action",
+        "perfect_quote": "These reveal knowing-in-action that may be described in terms of strategies, understandings of phenomena, and ways of framing a task or problem appropriate to the situation. The knowing-in-action is tacit, spontaneously delivered without conscious deliberation; and it works, yielding intended outcomes so long as the situation falls within the boundaries of what we have learned to treat as normal. Routine responses produce a surprise-an unexpected outcome, pleasant or unpleasant, that does not fit the categories of our knowing-in-action. Inherent in a surprise is the fact that it gets our attention. Surprise leads to reflection within an action-present. Reflection is at least in some measure conscious, although it need not occur in the medium of words. We consider both the unexpected event and the knowing-in-action that led up to it, asking ourselves, as it were, \"What is this?\" and, at the same time, \"How have I been thinking about it?\" Reflection-in-action has a critical function, questioning the assumptional structure of",
+        "key_features": [
+            "Knowing-in-Action: Guided by tacit knowledge including strategies and understandings.",
+            "Tacit and Spontaneous: Performed without conscious thought.",
+            "Effectiveness within Boundaries: Works within learned norms.",
+            "Surprise as a Trigger: Unexpected outcomes prompt attention and reflection.",
+            "Reflection within Action-Present: Conscious reflection during ongoing action.",
+            "Critical Inquiry: Questions underlying assumptions during reflection."
+        ],
+        "properties": {
+            "Morphism": "Details the interplay between Knowing-in-Action, Surprise, and Reflection-in-Action, forming a cycle of learning and adaptation through continuous engagement and reflection.",
+            "Tags": "knowing-in-action, surprise, reflection-in-action, tacit knowledge, spontaneous action, unexpected outcome, conscious reflection, critical inquiry, adaptive learning, embracing accidents, meaning-making, problem-solving stimulation, proactive creation, continuous evolution"
+        }
+    }
+]

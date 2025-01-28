@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohn & Wikan - Knowledge Cards</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        :root {
+            --background-color: #1a1a1a;
+            --text-color: #ffffff;
+            --accent-color: #4a9eff;
+            --sohn-color: #4ecdc4;
+            --wikan-color: #ff6b6b;
+            --platform-bg: rgba(40, 40, 40, 0.95);
+            --column-width: 35vw;
+            --visualization-width: 30vw;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        .platform-container {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .platform-column {
+            width: var(--column-width);
+            height: 100vh;
+            overflow-y: auto;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .visualization-container {
+            width: var(--visualization-width);
+            height: 100vh;
+            position: relative;
+            background: var(--background-color);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .platform-card {
+            background: var(--platform-bg);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .platform-card.sohn {
+            border-left: 4px solid var(--sohn-color);
+        }
+
+        .platform-card.wikan {
+            border-left: 4px solid var(--wikan-color);
+        }
+
+        .platform-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .platform-header {
+            margin-bottom: 15px;
+        }
+
+        .platform-id {
+            font-size: 0.8em;
+            opacity: 0.6;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .platform-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            margin: 0;
+            line-height: 1.3;
+        }
+
+        .platform-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .feature-chip {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            white-space: nowrap;
+            transition: background-color 0.3s ease;
+        }
+
+        .feature-chip:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .platform-quote {
+            font-size: 1.1em;
+            line-height: 1.6;
+            font-style: italic;
+            padding: 20px 0;
+            color: var(--accent-color);
+        }
+
+        .platform-morphism {
+            font-size: 0.95em;
+            line-height: 1.5;
+            margin: 15px 0;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        .key-features {
+            margin: 20px 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .key-features li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .key-features li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        /* Scrollbar styling */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .connection-line {
+            fill: none;
+            stroke-width: 2;
+            stroke-opacity: 0.6;
+            pointer-events: all;
+            cursor: pointer;
+        }
+
+        .connection-label {
+            font-family: 'SF Mono', monospace;
+            font-size: 0.8em;
+            fill: var(--text-color);
+            opacity: 0.8;
+        }
+
+        .toolbar {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--platform-bg);
+            padding: 10px 20px;
+            border-radius: 30px;
+            display: flex;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+        }
+
+        .connection-types {
+            display: flex;
+            gap: 10px;
+        }
+
+        .connection-type {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+
+        .connection-type[data-type="influences"] {
+            background: #4a9eff;
+        }
+
+        .connection-type[data-type="contradicts"] {
+            background: #ff6b6b;
+        }
+
+        .connection-type[data-type="supports"] {
+            background: #4ecdc4;
+        }
+
+        .connection-type[data-type="extends"] {
+            background: #9b59b6;
+        }
+
+        .connection-type:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.1);
+        }
+
+        .connection-type.active {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--text-color);
+        }
+
+        .platform-card.selected {
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .clear, .export-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+
+        .clear:hover, .export-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .search-container {
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+            width: 80%;
+            max-width: 400px;
+            background: var(--platform-bg);
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            font-size: 1em;
+            margin-bottom: 10px;
+        }
+
+        .search-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .search-options {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .search-option {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+        }
+
+        .search-option:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .search-option.active {
+            background: var(--accent-color);
+        }
+
+        .platform-card.hidden {
+            display: none;
+        }
+
+        .note-card {
+            position: absolute;
+            background: var(--platform-bg);
+            border-radius: 8px;
+            padding: 15px;
+            min-width: 200px;
+            max-width: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            cursor: move;
+            z-index: 1000;
+        }
+
+        .note-card.attached {
+            border: 2px solid var(--accent-color);
+        }
+
+        .note-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .note-title {
+            color: var(--text-color);
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .note-controls {
+            display: flex;
+            gap: 5px;
+        }
+
+        .note-control {
+            background: none;
+            border: none;
+            color: var(--text-color);
+            opacity: 0.6;
+            cursor: pointer;
+            padding: 2px;
+            font-size: 0.8em;
+        }
+
+        .note-control:hover {
+            opacity: 1;
+        }
+
+        .note-textarea {
+            width: 100%;
+            min-height: 100px;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-color);
+            font-size: 0.9em;
+            resize: vertical;
+        }
+
+        .note-textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .note-connector {
+            position: absolute;
+            pointer-events: none;
+            stroke: var(--accent-color);
+            stroke-width: 2;
+            stroke-dasharray: 4;
+        }
+
+        .note-target-indicator {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--accent-color);
+            pointer-events: none;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="platform-container">
+        <div class="platform-column" id="sohn-cards"></div>
+        <div class="visualization-container">
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search cards by title, content, or tags...">
+                <div class="search-options">
+                    <button class="search-option active" data-side="both">Both</button>
+                    <button class="search-option" data-side="sohn">Sohn</button>
+                    <button class="search-option" data-side="wikan">Wikan</button>
+                </div>
+            </div>
+            <div class="note-target-indicator"></div>
+            <svg class="connection-layer"></svg>
+        </div>
+        <div class="platform-column" id="wikan-cards"></div>
+    </div>
+
+    <div class="toolbar">
+        <div class="connection-types">
+            <button class="connection-type" data-type="influences">Influences</button>
+            <button class="connection-type" data-type="contradicts">Contradicts</button>
+            <button class="connection-type" data-type="supports">Supports</button>
+            <button class="connection-type" data-type="extends">Extends</button>
+        </div>
+        <button class="clear">Clear</button>
+        <button class="export-btn">Export</button>
+    </div>
+
+    <script>
+        let state = {
+            connections: [],
+            selectedPlatform: null,
+            connectionType: null,
+            notes: {},
+            nextNoteId: 1
+        };
+
+        const types = {
+            influences: { color: '#4a9eff' },
+            contradicts: { color: '#ff6b6b' },
+            supports: { color: '#4ecdc4' },
+            extends: { color: '#9b59b6' }
+        };
+
+        async function loadData() {
+            try {
+                const [sohnResponse, wikanResponse] = await Promise.all([
+                    fetch('sohn.json'),
+                    fetch('wikan.json')
+                ]);
+                
+                const sohnData = await sohnResponse.json();
+                const wikanData = await wikanResponse.json();
+
+                displayCards('sohn-cards', sohnData, 'sohn', '🪞', 'S');
+                displayCards('wikan-cards', wikanData, 'wikan', '〰️', 'W');
+
+                initializeConnections();
+                initializeSearch();
+                initializeNotes();
+            } catch (error) {
+                console.error('Error loading data:', error);
+            }
+        }
+
+        function displayCards(containerId, data, cardType, emoji, prefix) {
+            const container = document.getElementById(containerId);
+            
+            data.forEach((card, index) => {
+                const cardElement = document.createElement('div');
+                cardElement.className = `platform-card ${cardType}`;
+                cardElement.id = `${cardType}-${card.card_id}`;
+                cardElement.setAttribute('data-card-id', card.card_id);
+
+                const tags = card.properties.Tags.split(',').map(tag => 
+                    `<span class="feature-chip">${tag.trim()}</span>`
+                ).join('');
+
+                cardElement.innerHTML = `
+                    <div class="platform-header">
+                        <div class="platform-id">
+                            <span>${emoji}</span>
+                            <span>${cardType === 'sohn' ? 'Sohn' : 'Wikan'} ${prefix}${(index + 1).toString().padStart(2, '0')}</span>
+                        </div>
+                        <h2 class="platform-title">${card.header}</h2>
+                    </div>
+                    <div class="platform-features">
+                        ${tags}
+                    </div>
+                    <div class="platform-quote">
+                        ${card.perfect_quote}
+                    </div>
+                    <ul class="key-features">
+                        ${card.key_features.map(feature => 
+                            `<li>${feature}</li>`
+                        ).join('')}
+                    </ul>
+                    <div class="platform-morphism">
+                        ${card.properties.Morphism}
+                    </div>
+                `;
+
+                container.appendChild(cardElement);
+
+                // Add click handler for connections
+                cardElement.addEventListener('click', () => handleCardClick(cardElement.id));
+            });
+        }
+
+        function initializeConnections() {
+            const svg = d3.select('.connection-layer')
+                .attr('width', '100%')
+                .attr('height', '100%');
+
+            // Create arrow markers
+            const defs = svg.append('defs');
+            
+            Object.entries(types).forEach(([type, props]) => {
+                defs.append('marker')
+                    .attr('id', `arrow-${type}`)
+                    .attr('viewBox', '0 -5 10 10')
+                    .attr('refX', 8)
+                    .attr('refY', 0)
+                    .attr('markerWidth', 6)
+                    .attr('markerHeight', 6)
+                    .attr('orient', 'auto')
+                    .append('path')
+                    .attr('fill', props.color)
+                    .attr('d', 'M0,-5L10,0L0,5');
+            });
+
+            // Add event listeners for connection types
+            document.querySelectorAll('.connection-type').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.connection-type').forEach(b => b.classList.remove('active'));
+                    button.classList.add('active');
+                    state.connectionType = button.dataset.type;
+                });
+            });
+
+            // Add clear button handler
+            document.querySelector('.clear').addEventListener('click', () => {
+                state.connections = [];
+                state.selectedPlatform = null;
+                state.connectionType = null;
+                document.querySelectorAll('.platform-card').forEach(card => card.classList.remove('selected'));
+                document.querySelectorAll('.connection-type').forEach(button => button.classList.remove('active'));
+                renderConnections();
+            });
+
+            // Add export button handler
+            document.querySelector('.export-btn').addEventListener('click', () => {
+                const data = {
+                    connections: state.connections,
+                    notes: Object.fromEntries(
+                        Object.entries(state.notes).map(([id, note]) => [
+                            id,
+                            {
+                                text: note.text,
+                                attachedTo: note.attachedTo,
+                                offsetX: note.attachedTo?.offsetX,
+                                offsetY: note.attachedTo?.offsetY
+                            }
+                        ])
+                    )
+                };
+                const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'connections-and-notes.json';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+
+            // Add scroll handlers for connection updates
+            document.querySelectorAll('.platform-column').forEach(column => {
+                column.addEventListener('scroll', renderConnections);
+            });
+
+            // Add window resize handler
+            window.addEventListener('resize', renderConnections);
+        }
+
+        function initializeSearch() {
+            const searchInput = document.querySelector('.search-input');
+            const searchOptions = document.querySelectorAll('.search-option');
+            let currentSearchSide = 'both';
+
+            // Handle search option selection
+            searchOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    searchOptions.forEach(opt => opt.classList.remove('active'));
+                    option.classList.add('active');
+                    currentSearchSide = option.dataset.side;
+                    performSearch(searchInput.value, currentSearchSide);
+                });
+            });
+
+            // Handle search input
+            searchInput.addEventListener('input', () => {
+                performSearch(searchInput.value, currentSearchSide);
+            });
+        }
+
+        function performSearch(searchTerm, searchSide) {
+            const searchTermLower = searchTerm.toLowerCase();
+            const cards = document.querySelectorAll('.platform-card');
+
+            cards.forEach(card => {
+                const cardType = card.classList.contains('sohn') ? 'sohn' : 'wikan';
+                const shouldSearch = searchSide === 'both' || searchSide === cardType;
+
+                if (!shouldSearch) {
+                    card.classList.remove('hidden');
+                    return;
+                }
+
+                const cardContent = card.textContent.toLowerCase();
+                const tags = Array.from(card.querySelectorAll('.feature-chip'))
+                    .map(tag => tag.textContent.toLowerCase());
+
+                if (cardContent.includes(searchTermLower) || 
+                    tags.some(tag => tag.includes(searchTermLower))) {
+                    card.classList.remove('hidden');
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Refresh connections after search
+            renderConnections();
+        }
+
+        function handleCardClick(cardId) {
+            const card = document.getElementById(cardId);
+            
+            if (!state.connectionType) {
+                return;
+            }
+
+            if (!state.selectedPlatform) {
+                state.selectedPlatform = cardId;
+                card.classList.add('selected');
+            } else {
+                if (state.selectedPlatform === cardId) {
+                    card.classList.remove('selected');
+                    state.selectedPlatform = null;
+                } else {
+                    // Create new connection
+                    const sourceCard = document.getElementById(state.selectedPlatform);
+                    const sourceType = sourceCard.classList.contains('sohn') ? 'sohn' : 'wikan';
+                    const targetType = card.classList.contains('sohn') ? 'sohn' : 'wikan';
+
+                    // Only allow connections between different types
+                    if (sourceType !== targetType) {
+                        state.connections.push({
+                            source: state.selectedPlatform,
+                            target: cardId,
+                            type: state.connectionType
+                        });
+                        renderConnections();
+                    }
+
+                    // Reset selection
+                    document.querySelectorAll('.platform-card').forEach(c => c.classList.remove('selected'));
+                    state.selectedPlatform = null;
+                }
+            }
+        }
+
+        function renderConnections() {
+            const svg = d3.select('.connection-layer');
+            svg.selectAll('.connection-group').remove();
+
+            const containerRect = document.querySelector('.visualization-container').getBoundingClientRect();
+
+            state.connections.forEach(conn => {
+                const sourceEl = document.getElementById(conn.source);
+                const targetEl = document.getElementById(conn.target);
+
+                if (!sourceEl || !targetEl) return;
+
+                const sourceRect = sourceEl.getBoundingClientRect();
+                const targetRect = targetEl.getBoundingClientRect();
+
+                const sourceY = sourceRect.top + (sourceRect.height / 2) - containerRect.top;
+                const targetY = targetRect.top + (targetRect.height / 2) - containerRect.top;
+                
+                // Only render if both elements are visible
+                if (sourceY < 0 || sourceY > containerRect.height || 
+                    targetY < 0 || targetY > containerRect.height) {
+                    return;
+                }
+
+                const sourceX = sourceRect.right - containerRect.left;
+                const targetX = targetRect.left - containerRect.left;
+
+                const group = svg.append('g')
+                    .attr('class', 'connection-group')
+                    .attr('data-source', conn.source)
+                    .attr('data-target', conn.target)
+                    .attr('data-type', conn.type);
+
+                const dx = targetX - sourceX;
+                const dy = targetY - sourceY;
+                const controlX = dx * 0.5;
+
+                const path = group.append('path')
+                    .attr('class', 'connection-line')
+                    .attr('stroke', types[conn.type].color)
+                    .attr('stroke-width', 2)
+                    .attr('fill', 'none')
+                    .attr('marker-end', `url(#arrow-${conn.type})`)
+                    .attr('d', `
+                        M ${sourceX},${sourceY}
+                        C ${sourceX + controlX},${sourceY}
+                          ${targetX - controlX},${targetY}
+                          ${targetX},${targetY}
+                    `);
+
+                const pathNode = path.node();
+                const pathLength = pathNode.getTotalLength();
+                const midPoint = pathNode.getPointAtLength(pathLength / 2);
+
+                group.append('text')
+                    .attr('class', 'connection-label')
+                    .attr('x', midPoint.x)
+                    .attr('y', midPoint.y - 10)
+                    .attr('text-anchor', 'middle')
+                    .attr('fill', types[conn.type].color)
+                    .text(conn.type);
+            });
+        }
+
+        function updateNotePositions() {
+            Object.entries(state.notes).forEach(([noteId, noteData]) => {
+                const note = document.getElementById(noteId);
+                if (!note || !noteData.attachedTo) return;
+
+                const container = document.querySelector('.visualization-container');
+                const containerRect = container.getBoundingClientRect();
+
+                if (noteData.attachedTo.type === 'card') {
+                    const card = document.getElementById(noteData.attachedTo.cardId);
+                    if (!card) return;
+
+                    const cardRect = card.getBoundingClientRect();
+                    const offsetX = noteData.attachedTo.offsetX || 20;
+                    const offsetY = noteData.attachedTo.offsetY || 0;
+
+                    note.style.left = `${cardRect.right - containerRect.left + offsetX}px`;
+                    note.style.top = `${cardRect.top - containerRect.top + offsetY}px`;
+                } else if (noteData.attachedTo.type === 'connection') {
+                    const connection = noteData.attachedTo.connection;
+                    const sourceCard = document.getElementById(connection.source);
+                    const targetCard = document.getElementById(connection.target);
+                    if (!sourceCard || !targetCard) return;
+
+                    const sourceRect = sourceCard.getBoundingClientRect();
+                    const targetRect = targetCard.getBoundingClientRect();
+                    const offsetX = noteData.attachedTo.offsetX || 0;
+                    const offsetY = noteData.attachedTo.offsetY || 0;
+
+                    // Position at the midpoint of the connection
+                    const x = (sourceRect.right - containerRect.left + targetRect.left - containerRect.left) / 2;
+                    const y = (sourceRect.top - containerRect.top + sourceRect.height / 2 + 
+                             targetRect.top - containerRect.top + targetRect.height / 2) / 2;
+
+                    note.style.left = `${x + offsetX}px`;
+                    note.style.top = `${y + offsetY}px`;
+                }
+
+                updateNoteConnector(note);
+            });
+        }
+
+        function makeDraggable(note) {
+            const header = note.querySelector('.note-header');
+            let isDragging = false;
+            let startPos = { x: 0, y: 0 };
+            let startOffset = { x: 0, y: 0 };
+
+            header.addEventListener('mousedown', (e) => {
+                if (e.target.classList.contains('note-control')) return;
+                
+                isDragging = true;
+                const rect = note.getBoundingClientRect();
+                startPos = { x: e.clientX, y: e.clientY };
+                startOffset = { 
+                    x: e.clientX - rect.left, 
+                    y: e.clientY - rect.top 
+                };
+                
+                note.style.cursor = 'grabbing';
+            });
+
+            document.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+
+                const container = note.parentElement;
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left - startOffset.x;
+                const y = e.clientY - rect.top - startOffset.y;
+
+                note.style.left = `${x}px`;
+                note.style.top = `${y}px`;
+
+                const noteData = state.notes[note.id];
+                noteData.x = x;
+                noteData.y = y;
+
+                if (noteData.attachedTo) {
+                    // Store the offset from the attachment point
+                    if (noteData.attachedTo.type === 'card') {
+                        const card = document.getElementById(noteData.attachedTo.cardId);
+                        const cardRect = card.getBoundingClientRect();
+                        noteData.attachedTo.offsetX = x - (cardRect.right - rect.left);
+                        noteData.attachedTo.offsetY = y - (cardRect.top - rect.top);
+                    } else if (noteData.attachedTo.type === 'connection') {
+                        const connection = noteData.attachedTo.connection;
+                        const sourceCard = document.getElementById(connection.source);
+                        const targetCard = document.getElementById(connection.target);
+                        const sourceRect = sourceCard.getBoundingClientRect();
+                        const targetRect = targetCard.getBoundingClientRect();
+                        const midX = (sourceRect.right - rect.left + targetRect.left - rect.left) / 2;
+                        const midY = (sourceRect.top - rect.top + sourceRect.height / 2 + 
+                                    targetRect.top - rect.top + targetRect.height / 2) / 2;
+                        noteData.attachedTo.offsetX = x - midX;
+                        noteData.attachedTo.offsetY = y - midY;
+                    }
+                }
+
+                updateNoteConnector(note);
+            });
+
+            document.addEventListener('mouseup', () => {
+                if (isDragging) {
+                    isDragging = false;
+                    note.style.cursor = 'default';
+                }
+            });
+        }
+
+        function initializeNotes() {
+            const container = document.querySelector('.visualization-container');
+            const indicator = document.querySelector('.note-target-indicator');
+            let isDragging = false;
+            let currentNote = null;
+            let attachTarget = null;
+
+            // Double click to create free-floating note
+            container.addEventListener('dblclick', (e) => {
+                if (e.target === container || e.target.classList.contains('connection-layer')) {
+                    const rect = container.getBoundingClientRect();
+                    createNote({
+                        x: e.clientX - rect.left,
+                        y: e.clientY - rect.top
+                    });
+                }
+            });
+
+            // Click on connection to attach note
+            container.addEventListener('click', (e) => {
+                const connectionLine = e.target.closest('.connection-line');
+                if (connectionLine) {
+                    const group = connectionLine.closest('.connection-group');
+                    const connection = state.connections.find(c => 
+                        c.source === group.dataset.source && 
+                        c.target === group.dataset.target
+                    );
+                    
+                    if (connection) {
+                        const rect = container.getBoundingClientRect();
+                        createNote({
+                            x: e.clientX - rect.left,
+                            y: e.clientY - rect.top,
+                            attachedTo: {
+                                type: 'connection',
+                                connection: connection
+                            }
+                        });
+                    }
+                }
+            });
+
+            // Alt+click on card to attach note
+            document.querySelectorAll('.platform-card').forEach(card => {
+                card.addEventListener('click', (e) => {
+                    if (e.altKey) {
+                        const rect = container.getBoundingClientRect();
+                        const cardRect = card.getBoundingClientRect();
+                        createNote({
+                            x: cardRect.right - rect.left + 20,
+                            y: cardRect.top - rect.top,
+                            attachedTo: {
+                                type: 'card',
+                                cardId: card.id
+                            }
+                        });
+                        e.stopPropagation();
+                    }
+                });
+            });
+
+            function createNote(options) {
+                const noteId = `note-${state.nextNoteId++}`;
+                const note = document.createElement('div');
+                note.className = 'note-card';
+                note.id = noteId;
+                if (options.attachedTo) note.classList.add('attached');
+
+                note.innerHTML = `
+                    <div class="note-header">
+                        <div class="note-title">Note ${state.nextNoteId - 1}</div>
+                        <div class="note-controls">
+                            <button class="note-control" data-action="detach">📌</button>
+                            <button class="note-control" data-action="delete">✕</button>
+                        </div>
+                    </div>
+                    <textarea class="note-textarea" placeholder="Add your note here..."></textarea>
+                `;
+
+                note.style.left = `${options.x}px`;
+                note.style.top = `${options.y}px`;
+
+                container.appendChild(note);
+
+                // Store note data
+                state.notes[noteId] = {
+                    x: options.x,
+                    y: options.y,
+                    text: '',
+                    attachedTo: options.attachedTo
+                };
+
+                // Make note draggable
+                makeDraggable(note);
+
+                // Add note event listeners
+                const textarea = note.querySelector('.note-textarea');
+                textarea.addEventListener('input', () => {
+                    state.notes[noteId].text = textarea.value;
+                });
+
+                note.querySelector('[data-action="delete"]').addEventListener('click', () => {
+                    delete state.notes[noteId];
+                    note.remove();
+                });
+
+                note.querySelector('[data-action="detach"]').addEventListener('click', () => {
+                    if (state.notes[noteId].attachedTo) {
+                        state.notes[noteId].attachedTo = null;
+                        note.classList.remove('attached');
+                        updateNoteConnector(note);
+                    }
+                });
+
+                updateNoteConnector(note);
+            }
+
+            // Add scroll handler for note positions
+            document.querySelectorAll('.platform-column').forEach(column => {
+                column.addEventListener('scroll', () => {
+                    updateNotePositions();
+                    renderConnections();
+                });
+            });
+
+            // Add window resize handler for note positions
+            window.addEventListener('resize', () => {
+                updateNotePositions();
+                renderConnections();
+            });
+        }
+
+        function updateNoteConnector(note) {
+            const noteData = state.notes[note.id];
+            if (!noteData.attachedTo) return;
+
+            let connector = document.getElementById(`${note.id}-connector`);
+            if (!connector) {
+                connector = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+                connector.id = `${note.id}-connector`;
+                connector.classList.add('note-connector');
+                document.querySelector('.connection-layer').appendChild(connector);
+            }
+
+            const noteRect = note.getBoundingClientRect();
+            const containerRect = note.parentElement.getBoundingClientRect();
+            const noteCenter = {
+                x: noteRect.left - containerRect.left + noteRect.width / 2,
+                y: noteRect.top - containerRect.top + noteRect.height / 2
+            };
+
+            let targetPoint;
+            if (noteData.attachedTo.type === 'card') {
+                const card = document.getElementById(noteData.attachedTo.cardId);
+                const cardRect = card.getBoundingClientRect();
+                targetPoint = {
+                    x: cardRect.right - containerRect.left,
+                    y: cardRect.top - containerRect.top + cardRect.height / 2
+                };
+            } else if (noteData.attachedTo.type === 'connection') {
+                const connection = noteData.attachedTo.connection;
+                const sourceCard = document.getElementById(connection.source);
+                const targetCard = document.getElementById(connection.target);
+                const sourceRect = sourceCard.getBoundingClientRect();
+                const targetRect = targetCard.getBoundingClientRect();
+                
+                targetPoint = {
+                    x: (sourceRect.right - containerRect.left + targetRect.left - containerRect.left) / 2,
+                    y: (sourceRect.top - containerRect.top + sourceRect.height / 2 + 
+                        targetRect.top - containerRect.top + targetRect.height / 2) / 2
+                };
+            }
+
+            const dx = targetPoint.x - noteCenter.x;
+            const dy = targetPoint.y - noteCenter.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
+            const normX = dx / distance;
+            const normY = dy / distance;
+
+            const noteEdge = {
+                x: noteCenter.x + normX * 10,
+                y: noteCenter.y + normY * 10
+            };
+
+            const targetEdge = {
+                x: targetPoint.x - normX * 10,
+                y: targetPoint.y - normY * 10
+            };
+
+            connector.setAttribute('d', `
+                M ${noteEdge.x},${noteEdge.y}
+                L ${targetEdge.x},${targetEdge.y}
+            `);
+        }
+
+        // Load data when the page loads
+        document.addEventListener('DOMContentLoaded', loadData);
+    </script>
+</body>
+</html>
